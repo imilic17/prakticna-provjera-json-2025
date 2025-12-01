@@ -20,9 +20,11 @@
         <table class="table">
             <thead>
                 <tr>
-                <th scope="col">Ime</th>
-                <th scope="col">Prezime</th>
-                <th scope="col">Datum rođenja</th>
+                <th scope="col">ID</th>
+                <th scope="col">Naziv predmeta</th>
+                <th scope="col">Godisnji fond sati</th>
+                <th scope="col">Predmet je uvjet za iduću godinu </th>
+                <th scope="col">Opis predmeta</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,10 +36,10 @@
                     {
                         foreach ($usersData as $key => $value)
                         {
-                            $ime = $value['ime'];
-                            $prezime = $value['prezime'];
+                            $id = $value['ID'];
+                            $naziv = $value['naziv'];
 
-                            $datumRodenja = $value['datumRodenja'] ?? '';
+                            $ = $value['datumRodenja'] ?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             

@@ -1,0 +1,7 @@
+{
+   [
+      {"ID":1, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+      {"firstName":"Anna", "lastName":"Smith"},
+      {"firstName":"Peter", "lastName":"Jones"}
+    ]
+    }
