@@ -16,6 +16,18 @@
 $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
  $data =  json_decode($predmetiString, true);
 
+  $user = array('ime predmeta' => $_POST['ime_predmeta'], 'Naziv profesora' => $_POST['naziv_profesora'], 'Godisnji_fond_sati' => $_POST['godisnji_fond_sati'], 'je_li_predmet_uvijet_za_sljedecu_godinu' => $_POST['je_li_predmet_uvijet_za_sljedecu_godinu'], 'opis_predmeta' => $_POST['opis_predmeta']);
+    if (isset($data))
+    {
+        $data[] = $user;
+    }
+    else
+    {
+        $data = array($user);
+    }
+
+    $newString = json_encode($data);
+    file_put_contents(__DIR__.'/predmeti.json', $newString);
 
 
 
@@ -28,7 +40,7 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
 
 
 ?>
- <form>
+ <form method="$_POST">
   <div class="form-group">
     <input class="form-control" type="text" placeholder="Ime predmeta">
   </div>
