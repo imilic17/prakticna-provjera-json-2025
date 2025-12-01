@@ -12,13 +12,16 @@
 <div class="container">
     <h2 class="mb-4">Popis Predmeta</h2>
 
-    <!-- Gumbi -->
-    <div class="mb-3">
-        <button type="button" class="btn btn-primary me-2">Dodaj predmet</button>
-        <button type="button" class="btn btn-primary">Traži predmet</button>
+    
+    <div class="d-flex justify-content-between mb-3">
+        <button type="button" class="btn btn-primary">Dodaj predmet</button>
+        <div class="input-group w-50">
+            <input type="text" id="searchInput" class="form-control" placeholder="Traži predmet...">
+            <button class="btn btn-primary" onclick="searchTable()">Traži</button>
+        </div>
     </div>
 
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover" id="predmetiTable">
         <thead class="bg-primary text-white">
             <tr>
                 <th>ID predmeta</th>
@@ -31,7 +34,6 @@
         </thead>
 
         <tbody>
-           
             <tr class="table-success">
                 <td>1</td>
                 <td>Matematika</td>
@@ -72,6 +74,29 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function searchTable() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const table = document.getElementById("predmetiTable");
+    const rows = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < rows.length; i++) { 
+        let td = rows[i].getElementsByTagName("td")[1]; 
+        if (td) {
+            let textValue = td.textContent || td.innerText;
+            if (textValue.toLowerCase().indexOf(input) > -1) {
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+    }
+}
+
+
+document.getElementById("searchInput").addEventListener("keyup", searchTable);
+</script>
 
 </body>
 </html>
