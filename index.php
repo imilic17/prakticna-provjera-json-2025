@@ -39,29 +39,65 @@
   </thead>
   <tbody>
     <?php
-
+    $predmetiString =file_get_contents(__DIR__.'/predmeti.json');
+    $predemti = json_decode ($predmetiString,true);
+    if($jsonuser == null){
+        echo 'JSON nije validan';
+    }
+    if (isset($usersData))
+                    {
+                        foreach ($predemti as $key => $value)
+                        {
+                            $nazivPredmeta = $value['predmet'];
+                            $imeProfesora = $value['profesor'];
+                            $godisnjiFondSati = $value['fond'];
+                            $uvjetZaSljedecuGodinu = $value['uvjet'];
+                            $opis = $value['opis'];
+                            echo "<tr>
+                                <td> </td>
+                                <td>$nazivPredmeta</td>
+                                <td>$imeProfesora</td>
+                                <td>$godisnjiFondSati</td>
+                                <td>$uvjetZaSljedecuGodinu</td>
+                                <td>$opis</td>
+                                </tr>";
+                        }
+                    }
     ?>
   </tbody>
 </table>
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Dodaj novog korisnika</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
-        <button type="button" class="btn btn-primary">Spremi promjene</button>
-      </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Novi Predmet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="unos_predmeta.php" method="POST">
+                    <div class="modal-body">
+                        <div class="mb-12">
+                            <label for="ime" class="form-label">Ime predmeta</label>
+                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime predmeta">
+                        </div>
+                        <div class="mb-12">
+                            <label for="prezime" class="form-label">Prezime</label>
+                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
+                        </div>
+                        <div class="mb-12">
+                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
+                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                        <button type="submit" class="btn btn-primary">Spremi promjene</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
