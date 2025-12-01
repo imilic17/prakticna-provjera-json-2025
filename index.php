@@ -19,6 +19,12 @@
       </div>
   </form>
 
+  <div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Novi predmet
+        </button>
+    </div>
+
     <table class="table">
   <thead>
     <tr>
