@@ -14,31 +14,43 @@
   <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Ime</th>
-      <th scope="col">Prezime</th>
-      <th scope="col">Škola</th>
+      <th scope="col">ID</th>
+      <th scope="col">Naziv Predmeta</th>
+      <th scope="col">Ime Profesora</th>
+      <th scope="col">Godišnji Fond Sati</th>
+      <th scope="col">Predmet je uvjet za iduću godinu</th>
+      <th scope="col">Opis predmeta</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Marko</td>
-      <td>Lončarević</td>
-      <td>TŠD</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Teo</td>
-      <td>Tuček</td>
-      <td>TŠD</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Borna</td>
-      <td>Sertić</td>
-      <td>TŠD</td>
-    </tr>
+  <?php
+                    $userString = file_get_contents(__DIR__."/predmeti.json");
+                    $usersData = json_decode($userString, true);
+
+                    if (isset($usersData))
+                    {
+                        foreach ($usersData as $key => $value)
+                        {
+                            $NazivPredmeta = $value['NazivPredmeta'];
+                            $ImeProfesora = $value['ImeProfedora'];
+
+                            $GodFondSat = $value['GodFondSat'];
+                            $PJUZIG = $value['PJUZIG'];
+                            $OpisPredmeta = $value['OpisPredmeta'];
+
+                           
+                            echo "<tr>
+
+                                <td>$NazivPredmeta</td>
+                                <td>$ImeProfesora</td>
+                                <td>$GodFondSat</td>
+                                <td>$PJUZIG</td>
+                                <td>$OpisPredmeta</td>
+                            </tr>";
+                        }
+                    }
+                ?>
+   
   </tbody>
 </table>
 
