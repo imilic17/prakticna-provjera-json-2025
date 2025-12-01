@@ -29,6 +29,14 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
     $newString = json_encode($data);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
 
+    foreach ($data as $key => $value)
+                        {
+                            $ime_predmeta = $value['ime_predmeta'];
+                            $naziv_profesora = $value['naziv_profesora'];
+                            $godisnji_fond_sati = $value['godisnji_fond_sati'] ?? '';
+                            $je_li_predmet_uvijet_za_sljedecu_godinu = $value['je_li_predmet_uvijet_za_sljedecu_godinu'] ?? '';
+                            $opis_predmeta = $value['opis_predmeta'] ??'';}
+
 
 
      
@@ -40,7 +48,7 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
 
 
 ?>
- <form method="$_POST">
+ <form action="index.php" method="$_POST">
   <div class="form-group">
     <input class="form-control" type="text" placeholder="Ime predmeta">
   </div>
