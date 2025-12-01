@@ -21,7 +21,7 @@
         <table class="table">
             <thead>
                 <tr>
-                <th scope="col">ID</th>
+                
                 <th scope="col">Naziv predmeta</th>
                 <th scope="col">Ime profesora</th>
                 <th scope="col">Godišnji fond sati</th>
@@ -42,8 +42,9 @@
                         foreach ($usersData as $key => $value)
                         {
                             $nazivPredmeta = $value['nazivPredmeta'];
+                            
                             $imeProfesora = $value['imeProfesora'];
-                            $formCheck = $value['formCheck'];
+                            
 
                             $godisnjiFondSati = $value['godisnjiFondSati'];
                             $opisPredmeta = $value['opisPredmeta'] ?? '';
@@ -58,11 +59,12 @@
                             
     
                             echo "<tr>
+                            
                                 <td>$nazivPredmeta</td>
                                 <td>$imeProfesora</td>
                                 <td>$godisnjiFondSati</td>
                                 <td>$opisPredmeta</td>
-                                <td>$formCheck</td>
+                                
                               
                             </tr>";
                         }
@@ -94,13 +96,12 @@
                             <label for="godisnjiFondSati" class="form-label">Godišnji fond sati</label>
                             <input type="text" class="form-control" name="godisnjiFondSati" id="godisnjiFondSati" placeholder="fond sati koji se mora godišnje odraditi">
                         </div>
-                        <div class="mb-12">
-                         <div class="formCheck">
-                              <input class="fformCheck" type="checkbox" id="gridCheck">
-                                <label class="formCheck" for="gridCheck">
-                                predmet je uvjet za iduću godinu
-                                </label>
-                        </div>
+                        
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                        predmet je uvjet za iduću godinu
+                         </label>
                         <div class="mb-12">
                             <label for="opisPredmeta" class="form-label">Opis predmeta</label>
                             <input type="text" class="form-control" name="opisPredmeta" id="opisPredmeta" placeholder="Opis predmeta">
