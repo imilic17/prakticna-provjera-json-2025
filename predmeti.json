@@ -1,7 +1,13 @@
 {
-   [
+  "predmetnaData:" [
       {"ID":1, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-      {"firstName":"Anna", "lastName":"Smith"},
-      {"firstName":"Peter", "lastName":"Jones"}
+     {"ID":2, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+     {"ID":3, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+     {"ID":4, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+     {"ID":5, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+     {"ID":6, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+     {"ID":7, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+     {"ID":8, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
+
     ]
     }

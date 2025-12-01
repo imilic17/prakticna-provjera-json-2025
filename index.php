@@ -30,16 +30,16 @@
             <tbody>
                 <?php
                     $userString = file_get_contents(__DIR__."/predmeti.json");
-                    $usersData = json_decode($userString, true);
+                    $predmetnaData = json_decode($predmetnaData, true);
 
-                    if (isset($usersData))
+                    if (isset($predmetnaData))
                     {
-                        foreach ($usersData as $key => $value)
+                        foreach ($predmetnaData as $key => $value)
                         {
-                            $id = $value['ID'];
+                            $id = $value['id'];
                             $naziv = $value['naziv'];
 
-                            $ = $value['datumRodenja'] ?? '';
+                            $profesor = $value['profesor'] ?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
@@ -51,9 +51,9 @@
                             
     
                             echo "<tr>
-                                <td>$ime</td>
-                                <td>$prezime</td>
-                                <td>$datumRodenja</td>
+                                <td>$id</td>
+                                <td>$naziv</td>
+                                <td>$profesor</td>
                             </tr>";
                         }
                     }
