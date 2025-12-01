@@ -10,10 +10,30 @@
 
 <body>
 <?php 
+$predmetiString = file_get_contents(__DIR__.'/predmeti.json');
+ $data =  json_decode($predmetiString, true);
 
+        if (count($data)) {
+            
+            echo "<table>";
 
+            foreach ($data as $stand) {
 
+                
+                echo "<tr>";
+                echo "<td>$id</td>";
+                echo "<td>$imepredmeta</td>";
+                echo "<td>$nazivprofesora</td>";
+                echo "<td>$godisnjifondsati</td>";
+                echo "<td>$preduvijet</td>";
+                echo "<td>$opis</td>";
+                echo "</tr>";
+            }
 
+          
+            echo "</table>";
+        }
+ 
 
 
 
