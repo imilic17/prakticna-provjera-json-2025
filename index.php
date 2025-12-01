@@ -25,49 +25,67 @@
         <thead class="bg-primary text-white">
             <tr>
                 <th>ID predmeta</th>
-                <th>Ime predmeta</th>
-                <th>Naziv profesora</th>
+                <th>Naziv predmeta</th>
+                <th>Ime profesora</th>
                 <th>Godišnji fond sati</th>
-                <th>Uvjet za sljedeću godinu</th>
+                <th>Predmet je uvjet za iduću godinu</th>
                 <th>Opis predmeta</th>
             </tr>
         </thead>
 
         <tbody>
             <tr class="table-success">
-                <td>1</td>
-                <td>Matematika</td>
-                <td>prof. Tatjana Sekereš</td>
-                <td>140</td>
+            <td>1</td>
+                <td>Skriptni jezici i web programiranje</td>
+                <td>Ivana Milić</td>
+                <td>64</td>
                 <td>DA</td>
-                <td>Osnovni matematički koncepti i priprema za daljnje školovanje.</td>
+                <td>HTML, CSS, PHP, MySQL, JS</td>
             </tr>
 
             <tr>
                 <td>2</td>
-                <td>Skriptni jezici i web programiranje</td>
-                <td>prof. Ivana Milić</td>
+                <td>Operacijski sustavi</td>
+                <td>Antonio</td>
                 <td>70</td>
                 <td>NE</td>
-                <td>Ažuriranja stranice i učenje novih jezika.</td>
-            </tr>
-
-            <tr class="table-success">
-                <td>3</td>
-                <td>Fizika</td>
-                <td>prof. Ivan-Marko Dežić</td>
-                <td>120</td>
-                <td>DA</td>
-                <td>Osnove fizikalije, gravitacije + leće.</td>
+                <td>Vrste i uloge OS-a</td>
             </tr>
 
             <tr>
-                <td>4</td>
-                <td>Politika i Gospodarstvo</td>
-                <td>prof. Sanja Busić</td>
-                <td>90</td>
+            <td>3</td>
+                <td>Sigurnost iformacijskih sustava</td>
+                <td>Ivana</td>
+                <td>64</td>
                 <td>NE</td>
-                <td>Uvod u politiku i susret s povijesnim događajima.</td>
+                <td>Sigurnost po slojevima</td>
+            </tr>
+
+            <tr class="table-success">
+                <td>4</td>
+                <td>Matematika</td>
+                <td>Tomislav</td>
+                <td>105</td>
+                <td>DA</td>
+                <td>Samo za najjaće.</td>
+            </tr>
+
+            <tr class="table-success">
+                <td>5</td>
+                <td>Poslužiteljski operacijski sustavi</td>
+                <td>Kulhavi</td>
+                <td>64</td>
+                <td>DA</td>
+                <td>Vrste i uloge poslužiteljskih OS-a</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Tehnićko i poslovno komuniciranje</td>
+                <td>Mik</td>
+                <td>32</td>
+                <td>NE</td>
+                <td>Ući se komunicirati u poslovnom okruženju.</td>
             </tr>
         </tbody>
     </table>
