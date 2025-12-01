@@ -11,19 +11,60 @@
   <form class="row g-3">
                 
       <div class="col-sm-3">
-        <input placeholder="Unesite predmet" type="text" name="osoba" class="form-control" id="osoba">
+        <input placeholder="" type="text" name="osoba" class="form-control" id="osoba">
      </div>
 
       <div class="col-sm-2">
-        <button type="submit" class="btn btn-primary">Trazi</button>
+        <button type="submit" class="btn btn-primary">Trazi predmet</button>
       </div>
   </form>
 
   <div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Novi predmet
+            Dodaj predmet
         </button>
     </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Novi predmet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="unos_korisnika.php" method="POST">
+                    <div class="modal-body">
+                        <div class="mb-12">
+                            <label for="ime" class="form-label">Naziv predmeta</label>
+                            <input type="text" class="form-control" name="naziv predmeta" id="naziv-predmeta" placeholder="Naziv predmeta">
+                        </div>
+                        <div class="mb-12">
+                            <label for="prezime" class="form-label">Ime profesora</label>
+                            <input type="text" class="form-control" name="ime profesora" id="ime-profesora" placeholder="Ime profesora">
+                        </div>
+                        <div class="mb-12">
+                            <label for="datumRodenja" class="form-label">Godišnji fond sati</label>
+                            <input type="text" class="form-control" name="odradeno-sati" id="odradeno-sati" placeholder="Fond sati koji se mora godišnje odraditi.">
+                        </div>
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="uvjet" required>
+                            <label class="form-check-label" for="invalidCheck">Predmet je uvjet za iduću godinu</label>
+                        </div>
+                        <div class="mb-12">
+                            <label for="datumRodenja" class="form-label">Opis predmeta</label>
+                            <input type="text" class="form-control" name="opis-predmeta" id="opis-predmeta" placeholder="Opis predmeta">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Odbaci</button>
+                        <button type="submit" class="btn btn-primary">Dodaj predmet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <table class="table">
   <thead>
