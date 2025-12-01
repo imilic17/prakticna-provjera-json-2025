@@ -21,10 +21,29 @@
                 </div>
             </form>
         </div>
-        <!-- Model unos korisnika -->
+        <!-- Dugme za unos predmeta -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Dodaj korisnika
+  Dodaj predmet
 </button>
+<!--Tablica-->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Ime predmeta</th>
+      <th scope="col">Naziv profesora</th>
+      <th scope="col">Godišnji fond sati</th>
+      <th scope="col">Je li predmet uvjet za sljedeću godinu</th>
+      <th scope="col">Opis predemta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+
+    ?>
+  </tbody>
+</table>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -37,29 +56,12 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+        <button type="button" class="btn btn-primary">Spremi promjene</button>
       </div>
     </div>
   </div>
 </div>
-    <?php
-/*
-        $tablica='<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Ime predmeta</th>
-      <th scope="col">Naziv profesora</th>
-      <th scope="col">Godišnji fond sati</th>
-      <th scope="col">Je li predmet uvjet za sljedeću godinu</th>
-      <th scope="col">Opis predemta</th>
-    </tr>
-  </thead>
-  <tbody>';
-  </tbody>
-</table>*/
-    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
