@@ -30,7 +30,7 @@
             <tbody>
                 <?php
                     $userString = file_get_contents(__DIR__."/predmeti.json");
-                    $predmetnaData = json_decode($predmetnaData, true);
+                    $predmetnaData = json_decode($predmetnaData, true); //Uredi tablicu
 
                     if (isset($predmetnaData))
                     {
@@ -67,21 +67,21 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Dodaj novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="unos_korisnika.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">Ime</label>
+                            <label for="ime" class="form-label">INaziv predmeta</label>
                             <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Prezime</label>
+                            <label for="prezime" class="form-label">Ime profersora</label>
                             <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
+                            <label for="datumRodenja" class="form-label">Godisnji fond sati</label>
                             <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
                         </div>
                     </div>
