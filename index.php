@@ -8,6 +8,17 @@
   </head>
   <body>
 
+  <form class="row g-3">
+                
+      <div class="col-sm-3">
+        <input placeholder="Unesite predmet" type="text" name="osoba" class="form-control" id="osoba">
+     </div>
+
+      <div class="col-sm-2">
+        <button type="submit" class="btn btn-primary">Trazi</button>
+      </div>
+  </form>
+
     <table class="table">
   <thead>
     <tr>
