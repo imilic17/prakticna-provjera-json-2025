@@ -31,17 +31,18 @@
             </thead>
             <tbody>
                 <?php
-                    $userString = file_get_contents(__DIR__."/korisnici.json");
+                    $userString = file_get_contents(__DIR__."/predmeti.json");
                     $usersData = json_decode($userString, true);
 
                     if (isset($usersData))
                     {
                         foreach ($usersData as $key => $value)
                         {
-                            $ime = $value['ime'];
-                            $prezime = $value['prezime'];
+                            $nazivPredmeta = $value['nazivPredmeta'];
+                            $imeProfesora = $value['imeProfesora'];
 
-                            $datumRodenja = $value['datumRodenja'] ?? '';
+                            $godisnjiFondSati = $value['godisnjiFondSati'];
+                            $opisPredmeta = $value['opisPredmeta'] ?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
@@ -53,9 +54,10 @@
                             
     
                             echo "<tr>
-                                <td>$ime</td>
-                                <td>$prezime</td>
-                                <td>$datumRodenja</td>
+                                <td>$nazivPredmeta</td>
+                                <td>$imeProfesora</td>
+                                <td>$godisnjiFondSati</td>
+                                <td>$opisPredmeta</td>
                             </tr>";
                         }
                     }
@@ -69,22 +71,26 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Dodaj novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="unos_korisnika.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">Ime</label>
-                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
+                            <label for="nazivPredmeta" class="form-label">Naziv predmeta</label>
+                            <input type="text" class="form-control" name="nazivPredmeta" id="nazivPredmeta" placeholder="naziv predmeta">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Prezime</label>
-                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
+                            <label for="imeProfesora" class="form-label">Ime profesora</label>
+                            <input type="text" class="form-control" name="imeProfesora" id="imeProfesora" placeholder="ime profesora">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                            <label for="godisnjiFondSati" class="form-label">Godišnji fond sati</label>
+                            <input type="text" class="form-control" name="godisnjiFondSati" id="godisnjiFondSati" placeholder="fond sati koji se mora godišnje odraditi">
+                        </div>
+                        <div class="mb-12">
+                            <label for="opisPredmeta" class="form-label">Opis predmeta</label>
+                            <input type="text" class="form-control" name="opisPredmeta" id="opisPredmeta" placeholder="Opis predmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
