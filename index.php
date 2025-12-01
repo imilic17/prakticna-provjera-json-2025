@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Predmeti</title>
 
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light p-4">
 
 <div class="container">
     <h2 class="mb-4">Popis Predmeta</h2>
+
+    <!-- Gumbi -->
+    <div class="mb-3">
+        <button type="button" class="btn btn-primary me-2">Dodaj predmet</button>
+        <button type="button" class="btn btn-primary">Traži predmet</button>
+    </div>
 
     <table class="table table-bordered table-hover">
         <thead class="bg-primary text-white">
@@ -42,7 +47,7 @@
                 <td>prof. Ivana Milić</td>
                 <td>70</td>
                 <td>NE</td>
-                <td>Ažuriranja stranice i ućenje novih jezika.</td>
+                <td>Ažuriranja stranice i učenje novih jezika.</td>
             </tr>
 
             <tr class="table-success">
@@ -65,7 +70,6 @@
         </tbody>
     </table>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
