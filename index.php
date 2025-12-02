@@ -6,35 +6,52 @@
     <title>Index</title>
 </head>
 <body>
-<div class='container'>
-        <div class="row">
-            <form class="row g-3">
+<div>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Ime predmeta</th>
+                <th scope="col">Naziv profesora</th>
+                <th scope="col">Godišnji fond sati</th>
+                <th scope="col">Predmet je uvjet za iduću godinu</th>
+                <th scope="col">Opis predmeta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $userString = file_get_contents(__DIR__."/predmeti.json");
+                    $usersData = json_decode($userString, true);
+
+                    if (isset($usersData))
+                    {
+                        foreach ($usersData as $key => $value)
+                        {
+                            $ime = $value['ime'];
+                            $prezime = $value['prezime'];
+
+                            $datumRodenja = $value['datumRodenja'] ?? '';
+
+                            // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
+                            
+                            // $datumRodenja = '';
+                            // if (isset($value['datumRodenja']) )
+                            // {
+                            //     $datumRodenja = $value['datumRodenja'];
+                            // }
+                            
+    
+                            echo "<tr>
+                                <td>$ime</td>
+                                <td>$prezime</td>
+                                <td>$datumRodenja</td>
+                            </tr>";
+                        }
+                    }
+                ?>
                 
-                <div class="col-sm-3">
-                    <input placeholder="ime ososbe" type="text" name="osoba" class="form-control" id="osoba">
-                </div>
-
-                <div class="col-sm-3">
-                    <input placeholder="zadatak" type="text" name="zadatak" class="form-control" id="zadatak">
-                </div>
-
-                <div class="col-sm-2">
-                    <button type="submit" class="btn btn-primary">Trazi</button>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Naziv predmeta</th>
-                        <th scope="col">Ime profesora</th>
-                        <th scope="col">Godišnji fond sati</th>
-                        <th scope="col">Predmet je uvjet za iduću godinu</th>
-                        <th scope="col">Opis predmeta</th>
-                    </tr>
-                </thead>
-                <tbody>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
