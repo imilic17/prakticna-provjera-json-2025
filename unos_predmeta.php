@@ -3,11 +3,11 @@
     $userString = file_get_contents(__DIR__.'/predmeti.json');
     $usersData = json_decode($userString);
 
-    $user = array('naziv' => $_POST['Naziv predmeta'], 
-                    'profesor' => $_POST['Ime profesora'],
-                    'fondsati' => $_POST['Godišnji fond sati'],
-                    'uvjet' => $_POST['Predmet je uvjet za iduću godinu'],
-                    'Opis' => $_POST['Opis predmeta']);
+    $user = array('naziv' => $_POST['naziv'], 
+                    'profesor' => $_POST['profesor'],
+                    'fondsati' => $_POST['fondsati'],
+                    'uvjet' => $_POST['uvjet'],
+                    'opis' => $_POST['opis']);
     
     if (isset($usersData))
     {

@@ -36,7 +36,6 @@
                         {
                             $ime = $value['ime'];
                             $prezime = $value['prezime'];
-
                             $datumRodenja = $value['datumRodenja'] ?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';

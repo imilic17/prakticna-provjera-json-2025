@@ -3,7 +3,9 @@
     $userString = file_get_contents(__DIR__.'/korisnici.json');
     $usersData = json_decode($userString);
 
-    $user = array('ime' => $_POST['ime'], 'prezime' => $_POST['prezime'], 'datumRodenja' => $_POST['datumRodenja']);
+    $user = array('ime' => $_POST['ime'], 
+                    'prezime' => $_POST['prezime'], 
+                    'datumRodenja' => $_POST['datumRodenja']);
     if (isset($usersData))
     {
         $usersData[] = $user;
