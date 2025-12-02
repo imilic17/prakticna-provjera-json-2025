@@ -39,6 +39,7 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 Dodaj novi predmet</button>
 
+
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -58,7 +59,14 @@ Dodaj novi predmet</button>
                         <div class="mb-12">
                             <label for="fond sati koji se mora godišnje odraditi" class="form-label">Godišnji fond sati</label>
                             <input type="text" class="form-control" name="fond sati koji se mora godišnje odraditi" id="fond sati koji se mora godišnje odraditi" placeholder="fond sati koji se mora godišnje odraditi">
+                            <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+  <label class="form-check-label" for="flexCheckIndeterminate">
+    Predmet je uvjet za iduću godinu
+  </label>
+</div>
                         </div>
+                        
                         <div class="mb-12">
                             <label for="opis predmeta" class="form-label">Opis predmeta</label>
                             <input type="text" class="form-control" name="opis predmeta" id="opis predmeta" placeholder="opis predmeta">
@@ -87,35 +95,31 @@ Dodaj novi predmet</button>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
 
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@fat</td>
-    </tr>
+    <?php
+                    $userString = file_get_contents(__DIR__."/predmeti.json");
+                    $usersData = json_decode($userString, true);
 
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-      <td>@fat</td>
-    </tr>
+                    if (isset($usersData))
+                    {
+                        foreach ($usersData as $key => $value)
+                        {
+                            $naziv = $value['naziv'];
+                            $profesor = $value['profesor'];
+                            $fond_sati = $value['fond_sati'];
+                            $uvjet = $value['uvjet'];
+                            $opis = $value['opis'];
 
-    <tr>
-      <th scope="row">4</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-      <td>@fat</td>
-    </tr>
+                            echo "<tr>
+                                <td>$naziv</td>
+                                <td>$profesor</td>
+                                <td>$fond_sati</td>
+                                <td>$uvjet</td>
+                                <td>$opis</td>
+                            </tr>";
+                        }
+                    }
+                ?>
   </tbody>
 </table>
 

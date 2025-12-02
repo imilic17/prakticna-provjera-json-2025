@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "naziv": "Skriptni jezici i Web programiranje",
+        "profesor": "Ivan Milić",
+        "fond_sati": 64,
+        "uvjet": "DA",
+        "opis": "HTML, CSS, PHP, MySQL, JavaScript"
+    },
+    {
+        "id": 2,
+        "naziv": "Tehničko i poslovno komuniciranje",
+        "profesor": "Miroslav Tomica",
+        "fond_sati": 67,
+        "uvjet": "NE",
+        "opis": "Formati papira, pismo"
+    },
+    {
+        "id": 3,
+        "naziv": "Priroda i društvo",
+        "profesor": "Fran Maroši",
+        "fond_sati": 670,
+        "uvjet": "DA",
+        "opis": "Biljke, životinje"
+    }
+]
