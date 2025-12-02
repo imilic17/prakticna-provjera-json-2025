@@ -65,7 +65,7 @@ $filter = $_GET['filter'] ?? '';
                             <td>{$p['id']}</td>
                             <td>{$p['naziv']}</td>
                             <td>{$p['profesor']}</td>
-                            <td>{$p['sati_godisnje']}</td>
+                            <td>{$p['sati']}</td>
                             <td>{$p['uvjet']}</td>
                             <td>{$p['opis']}</td>
                             </tr>";
@@ -101,10 +101,13 @@ $filter = $_GET['filter'] ?? '';
                         <label class="form-label mt-2">Broj sati godišnje</label>
                         <input type="number" name="sati" class="form-control" required>
 
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Default checkbox
-                        </label>    
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" name="uvjet" id="uvjetCheckbox" value="DA">
+                            <label class="form-check-label" for="uvjetCheckbox">
+                                Uvjet za iduću godinu (DA/NE)
+                            </label>
+                        </div>
+
 
                         <label class="form-label mt-2">Opis predmeta</label>
                         <textarea name="opis" class="form-control" required></textarea>
