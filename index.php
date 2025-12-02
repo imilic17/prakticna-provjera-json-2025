@@ -80,7 +80,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="unos_korisnika.php" method="POST">
+                <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
                             <label for="imePredmeta" class="form-label">Naziv predmeta</label>
