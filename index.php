@@ -31,6 +31,20 @@ $filter = $_GET['filter'] ?? '';
         <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#noviModal">
             Dodaj predmet
         </button>
+
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Naziv predmeta</th>
+                    <th>Ime profesora</th>
+                    <th>Broj sati godišnje</th>
+                    <th>Uvijet za iduću godinu</th>
+                    <th>Opis predmeta</th>
+                </tr>
+            </thead>
+            
+        </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
