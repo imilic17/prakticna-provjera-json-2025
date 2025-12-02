@@ -21,10 +21,10 @@ $filter = $_GET['filter'] ?? '';
     <div class="container">
         <h2 class="mb-4">Popis predmeta</h2>
 
-        <form class="row g-3 mb-4" method="GET">
+        <form class="row g-3 mb-4" method="GET" onsubmit="return clearFilter()">
             <div class="col-sm-4">
-                <input type="text" name="filter" class="form-control" placeholder="Upiši naziv predmeta..."
-                    value="<?php echo htmlspecialchars($filter) ?>">
+                <input type="text" name="filter" class="form-control" placeholder="Upiši naziv predmeta...">
+
             </div>
             <div class="col-sm-2">
                 <button class="btn btn-primary">Traži</button>
@@ -127,5 +127,16 @@ $filter = $_GET['filter'] ?? '';
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
+
+<script>
+    function clearFilter() {
+        const value = document.querySelector("input[name='filter']").value;
+
+
+        window.location.href = "?filter=" + encodeURIComponent(value);
+
+        return false;
+    }
+</script>
 
 </html>
