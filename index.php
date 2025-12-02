@@ -16,28 +16,45 @@
       <th scope="col">Naziv Predmeta</th>
       <th scope="col">Ime profesora</th>
       <th scope="col">Godišnji fond sati</th>
+      <th scope="col">Predmet je uvijet za iduću godinu</th>
+      <th scope="col">Opis Predmeta</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+  <?php
+           
+            $predmetiString = file_get_contents(__DIR__ . '/predmeti.json');
+            $predmetiJson = json_decode($predmetiString, true);
+
+            
+        
+
+                    
+                        foreach ($usersData as $key => $value)
+                        {
+                            $ime = $value['ime'];
+                            $prezime = $value['prezime'];
+
+                            $datumRodenja = $value['datumRodenja'] ?? '';
+
+                            // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
+                            
+                            // $datumRodenja = '';
+                            // if (isset($value['datumRodenja']) )
+                            // {
+                            //     $datumRodenja = $value['datumRodenja'];
+                            // }
+                            
+    
+                            echo "<tr>
+                                <td>$ime</td>
+                                <td>$prezime</td>
+                                <td>$datumRodenja</td>
+                            </tr>";
+                        }
+                    
+        ?>
+                </tbody>
 </table>
 
     
