@@ -82,6 +82,7 @@
                             <label for="datumRodenja" class="form-label">Datum rođenja</label>
                             <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
                         </div>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
