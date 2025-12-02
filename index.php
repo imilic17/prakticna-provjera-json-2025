@@ -6,6 +6,26 @@
     <title>Index</title>
 </head>
 <body>
+<div class='container'>
+        <div class="row">
+            <form class="row g-3">
+                
+                
+
+                <div class="col-sm-3">
+                    <input placeholder="" type="text" name="predmet" class="form-control" id="predmet">
+                </div>
+
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary">Trazi predmet</button>
+                </div>
+            </form>
+        </div>
+<div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Novi predmet
+        </button>
+    </div>
 <div>
         <table class="table">
             <thead>
@@ -27,24 +47,23 @@
                     {
                         foreach ($usersData as $key => $value)
                         {
-                            $ime = $value['ime'];
-                            $prezime = $value['prezime'];
+                            $idPredmeta = $value['idPredmeta'];
+                            $imePredmeta = $value['imePredmeta'];
+                            $nazivProfesora = $value['nazivProfesora'];
+                            $godisnjiFondSati = $value['godisnjiFondSati'];
+                            $obavezan = $value['obavezan'];
+                            $opisPredmeta = $value['opisPredmeta'];
+                           
 
-                            $datumRodenja = $value['datumRodenja'] ?? '';
-
-                            // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
-                            
-                            // $datumRodenja = '';
-                            // if (isset($value['datumRodenja']) )
-                            // {
-                            //     $datumRodenja = $value['datumRodenja'];
-                            // }
                             
     
                             echo "<tr>
-                                <td>$ime</td>
-                                <td>$prezime</td>
-                                <td>$datumRodenja</td>
+                                <td>$idPredmeta</td>
+                                <td>$imePredmeta</td>
+                                <td>$nazivProfesora</td>
+                                <td>$godisnjiFondSati</td>
+                                <td>$obavezan</td>
+                                <td>$opisPredmeta</td>
                             </tr>";
                         }
                     }
