@@ -29,10 +29,8 @@ $noviPredmet = [
 
 $predmeti[] = $noviPredmet;
 
-file_put_contents($dir, json_encode($predmeti, JSOn_PRETTY_PRINT));
+file_put_contents($dir, json_encode($predmeti, JSON_PRETTY_PRINT));
 header('Location: index.php');
 exit();
-
-
 
 ?>
