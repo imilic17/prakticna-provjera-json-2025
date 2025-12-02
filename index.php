@@ -41,7 +41,7 @@
                             $ime_profesora = $value['ime_profesora'];
                             $naziv_predmeta = $value['naziv_predmeta'];
                             $fond_sati = $value['fond_sati'];
-                            $uvjet_za_sljedecu_godinu = $value['uvjet_za_sljedecu_godinu']
+                            $uvjet_za_sljedecu_godinu = $value['uvjet_za_sljedecu_godinu'];
                             $opis_predmeta = $value['opis_predmeta'] ?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
