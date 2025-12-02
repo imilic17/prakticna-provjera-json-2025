@@ -16,6 +16,6 @@
     $newString = json_encode($usersData);
     file_put_contents(__DIR__.'/korisnici.json', $newString);
 
-    header("Location: http://localhost/zadatak_s_unosom_korisnika/index.php");
+    header("Location: http://localhost/FranMarosiPrakticna/prakticna-provjera-json-2025/zadatak_s_unosom_korisnika/index.php");
     die();
 ?>
