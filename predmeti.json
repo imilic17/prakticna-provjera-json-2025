@@ -1,26 +1,33 @@
 [
     {
-        "id":1,
-        "ime":"Skriptni jezici",
-        "profesor":"Milicka",
-        "sati":64,
-        "uvjet":"DA",
-        "opis":"HTML,CSS,PHP,MySQL,JS"
+        "id": 1,
+        "ime": "Skriptni jezici",
+        "profesor": "Milicka",
+        "sati": 64,
+        "uvjet": "DA",
+        "opis": "HTML,CSS,PHP,MySQL,JS"
     },
     {
-        "id":3,
-        "ime":"Operacijski sustavi",
-        "profesor":"Antonio",
-        "sati":70,
-        "uvjet":"NE",
-        "opis":"Vrste i Uloge OS-a"
+        "id": 3,
+        "ime": "Operacijski sustavi",
+        "profesor": "Antonio",
+        "sati": 70,
+        "uvjet": "NE",
+        "opis": "Vrste i Uloge OS-a"
     },
     {
-        "id":3,
-        "ime":"SiS",
-        "profesor":"Ivana",
-        "sati":64,
-        "uvjet":"NE",
-        "opis":"Sigurnost po slojevima"
+        "id": 3,
+        "ime": "SiS",
+        "profesor": "Ivana",
+        "sati": 64,
+        "uvjet": "NE",
+        "opis": "Sigurnost po slojevima"
+    },
+    {
+        "ime": "Matematika",
+        "profesor": "Tomislav",
+        "sati": 0,
+        "uvjet": "DA",
+        "opis": "Samo za najjače"
     }
 ]

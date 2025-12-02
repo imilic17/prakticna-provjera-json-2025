@@ -72,19 +72,19 @@
                     <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="ime" class="form-label">Ime predmeta *</label>
+                            <label for="ime" class="form-label">Ime predmeta</label>
                             <input type="text" class="form-control" id="ime" name="ime" required>
                         </div>
                         <div class="mb-3">
-                            <label for="profesor" class="form-label">Profesor *</label>
+                            <label for="profesor" class="form-label">Profesor</label>
                             <input type="text" class="form-control" id="profesor" name="profesor" required>
                         </div>
                         <div class="mb-3">
-                            <label for="sati" class="form-label">Godišnji fond sati *</label>
+                            <label for="sati" class="form-label">Godišnji sati</label>
                             <input type="number" class="form-control" id="fond_sati" name="fond_sati" required min="1">
                         </div>
                         <div class="mb-3">
-                            <label for="uvjet" class="form-label">Je li uvjet za sljedeću godinu? *</label>
+                            <label for="uvjet" class="form-label">Je li uvjet za sljedeću godinu?</label>
                             <select class="form-select" id="uvjet" name="uvjet" required>
                                 <option value="NE">NE</option>
                                 <option value="DA">DA</option>
