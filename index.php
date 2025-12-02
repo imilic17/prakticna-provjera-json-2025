@@ -4,7 +4,7 @@
     $predmeti = json_decode($predmetString, true);
 
     
-    $filter = $_GET['filter'] ?? "";
+    
 
 
     ?>
@@ -22,16 +22,19 @@
 
     
 
-    <form class="row g-3 mb-4" method="GET">
-        <div class="col-sm-4">
-            <input type="text" name="filter" class="form-control" placeholder="Tražilica" value="<?= htmlspecialchars($filter)?>">
-            
-        </div>
-        <div class="col-sm-2">
-            <button class="btn btn-primary">Traži</button>
-        </div>
-    </form>
+        <div class='container'>
+        <div class="row">
+            <form class="row g-3">
+                
+                <div class="col-sm-3">
+                    <input placeholder="Tražilica" type="text" name="osoba" class="form-control" id="osoba">
+                </div>
 
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary">Traži</button>
+                </div>
+            </form>
+        </div>
 
 
     <div>
@@ -69,25 +72,25 @@
                     <div class="modal-body">
                         <div class="mb-12">
                             <label for="ime" class="form-label">Naziv predmeta</label>
-                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Naziv predmeta">
+                            <input type="text" class="form-control" name="naziv" id="naziv" placeholder="Naziv predmeta">
                         </div>
                         <div class="mb-12">
                             <label for="prezime" class="form-label">Ime profesora</label>
-                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Ime profesora">
+                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime profesora">
                         </div>
                         <div class="mb-12">
                             <label for="datumRodenja" class="form-label">Godišnji fond sati</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Godišnji fond sati">
+                            <input type="text" class="form-control" name="fond" id="fond" placeholder="Godišnji fond sati">
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <input class="form-check-input" type="checkbox" name="uvjet" id="uvjet">
                         <label class="form-check-label" for="gridCheck">
                         Predmet je uvjet za iduću godinu
                         </label>
                         </div>
                         <div class="mb-12">
                             <label for="datumRodenja" class="form-label">Opis predmeta</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Opis predmeta">
+                            <input type="text" class="form-control" name="opis" id="opis" placeholder="Opis predmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
