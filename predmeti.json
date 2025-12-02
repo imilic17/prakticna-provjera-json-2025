@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "naziv_predmeta": "skriptni jezici i web programiranje",
+        "ime_profesora": "Ivan Milić",
+        "fond_sati": 64,
+        "uvjet_za_sljedece_godinu": "DA",
+        "opis_predmeta": "HTML, CSS, PHP, MySQL, JS"
+    },
+    {
+        "id": 2,
+        "naziv_predmeta": "operacijski sustavi",
+        "ime_profesora": "Antonio",
+        "fond_sati": 70,
+        "uvjet_za_sljedece_godinu": "NE",
+        "opis_predmeta": "Vrste i usluge OSa"
+    },
+    {
+        "id": 3,
+        "naziv_predmeta": "sigurnost informacijskih sustava",
+        "ime_profesora": "Ivana",
+        "fond_sati": 64,
+        "uvjet_za_sljedece_godinu": "NE",
+        "opis_predmeta": "sigurnost po slojevima"
+    }
+    
+    
+]
