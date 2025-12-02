@@ -8,7 +8,7 @@
 <body>
 <div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Novi korisnik
+            Dodaj predmet
         </button>
     </div>
     <div>
@@ -32,12 +32,12 @@
                     {
                         foreach ($usersData as $key => $value)
                         {
-                            $id = $value['ID'];
+                            $ID = $value['ID'];
                             $imeProfesora = $value['imeProfesora'];
-                            $nazivPredmeta = $value['NazivPremdeta'];
-                            $godisnjiFondSati = $value['GodisnjiFondSati'];
-                            $predmetJeUvjekZaIducuGodinu = $value['PredmetJeUvjetZaIducuGodinu'];
-                            $opisPredmeta = $value['OpisPredmeta']?? '';
+                            $nazivPredmeta = $value['nazivPredmeta'];
+                            $godisnjiFondSati = $value['godisnjiFondSati'];
+                            $predmetJeUvjetZaIducuGodinu = $value['predmetJeUvjetZaIducuGodinu'];
+                            $opisPredmeta = $value['ospisPredmeta']?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
@@ -49,11 +49,11 @@
                             
     
                             echo "<tr>
-                                <td>$id</td>
+                                <td>$ID</td>
                                 <td>$imeProfesora</td>
                                 <td>$nazivPredmeta</td>
                                 <td>$godisnjiFondSati</td>
-                                <td>$predmetJeUvjekZaIducuGodinu</td>
+                                <td>$predmetJeUvjetZaIducuGodinu</td>
                                 <td>$opisPredmeta</td>
                             </tr>";
                         }
@@ -68,21 +68,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Dodaj predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="unos_korisnika.php" method="POST">
+                <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">Ime</label>
+                            <label for="ime" class="form-label">NazivPredmeta</label>
                             <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Prezime</label>
+                            <label for="prezime" class="form-label">Ime profesora</label>
                             <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
+                            <label for="datumRodenja" class="form-label">Novi korisnik</label>
+                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                        </div>
+                        <div class="mb-12">
+                            <label for="datumRodenja" class="form-label">Predmet je uvjek za iducu godinu</label>
+                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                        </div>
+                        <div class="mb-12">
+                            <label for="datumRodenja" class="form-label">Opis predmeta</label>
                             <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
                         </div>
                     </div>
