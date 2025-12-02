@@ -22,39 +22,35 @@
   </thead>
   <tbody>
   <?php
-           
+            
             $predmetiString = file_get_contents(__DIR__ . '/predmeti.json');
             $predmetiJson = json_decode($predmetiString, true);
 
             
-        
-
-                    
-                        foreach ($usersData as $key => $value)
+            if (isset($predmetiJson))
+                    {
+                        foreach ($predmetiJson as $key => $value)
                         {
+                            $id = $value['id'];
+                            $NazivPredmeta = $value['NazivPredmeta'];
                             $ime = $value['ime'];
-                            $prezime = $value['prezime'];
+                            $GodisnjiFondSati = $value['GodisnjiFondSati'];
+                            $UvjetGod = $value['UvjetGod'];
+                            $OpisPredmeta = $value['OpisPredmeta'];
 
-                            $datumRodenja = $value['datumRodenja'] ?? '';
-
-                            // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
-                            // $datumRodenja = '';
-                            // if (isset($value['datumRodenja']) )
-                            // {
-                            //     $datumRodenja = $value['datumRodenja'];
-                            // }
-                            
-    
                             echo "<tr>
+                            <td>$id</td>
+                            <td>$NazivPredmeta</td>
                                 <td>$ime</td>
-                                <td>$prezime</td>
-                                <td>$datumRodenja</td>
+                                <td>$GodisnjiFondSati</td>
+                                <td>$UvjetGod</td>
+                                <td>$OpisPredmeta</td>
                             </tr>";
                         }
-                    
+                    }
         ?>
-                </tbody>
+    </tbody>
 </table>
 
     
