@@ -79,16 +79,28 @@
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">Ime</label>
-                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
+                            <label for="id" class="form-label">ID</label>
+                            <input type="text" class="form-control" name="ime" id="id" placeholder="id">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Prezime</label>
-                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
+                            <label for="ime_profesora" class="form-label">Ime prof</label>
+                            <input type="text" class="form-control" name="ime" id="ime_profesora" placeholder="ime_profesora">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                            <label for="naziv_predmeta" class="form-label">naziv predmeta</label>
+                            <input type="text" class="form-control" name="naziv_predmeta" id="naziv_predmeta" placeholder="naziv_predmeta">
+                        </div>
+                        <div class="mb-12">
+                            <label for="fond_sati" class="form-label">fond sati</label>
+                            <input type="text" class="form-control" name="fond_sati" id="fond_sati" placeholder="fond_sati">
+                        </div>
+                        <div class="mb-12">
+                            <label for="uvjet_za_sljedecu_godinu" class="form-label">uvjet za slj. god.</label>
+                            <input type="text" class="form-control" name="uvjet_za_sljedecu_godinu" id="uvjet_za_sljedecu_godinu" placeholder="uvjet_za_sljedecu_godinu">
+                        </div>
+                        <div class="mb-12">
+                            <label for="opis_predmeta" class="form-label">opis predmeta</label>
+                            <input type="text" class="form-control" name="opis_predmeta" id="opis_predmeta" placeholder="opis_predmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
