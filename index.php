@@ -77,22 +77,30 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="unos_korisnika.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">Ime</label>
-                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
+                            <label for="imePredmeta" class="form-label">Naziv predmeta</label>
+                            <input type="text" class="form-control" name="imePredmeta" id="imePredmeta" placeholder="Ime">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Prezime</label>
-                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
+                            <label for="imeProfesora" class="form-label">Ime profesora</label>
+                            <input type="text" class="form-control" name="imeProfesora" id="imeProfesora" placeholder="Ime profesora">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                            <label for="godisnjiFondSati" class="form-label">Godišnji fond sati</label>
+                            <input type="text" class="form-control" name="godisnjiFondSati" id="godinsjiFondSati" placeholder="Godišnji fond sati">
+                        </div>
+                        <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="obavezan" value="obavezan">
+  <label class="form-check-label" for="obavezan">Predmet je uvjet za iduću godinu</label>
+</div>
+<div class="mb-12">
+                            <label for="opisPredmeta" class="form-label">Opis predmeta</label>
+                            <input type="text" class="form-control" name="opisPredmeta" id="opisPredmeta" placeholder="Opis predmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
