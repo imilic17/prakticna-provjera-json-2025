@@ -27,10 +27,12 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Ime i prezime</th>
-                        <th scope="col">Naziv zadatka</th>
-                        <th scope="col">Zadatak izvrsen</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Naziv predmeta</th>
+                        <th scope="col">Ime profesora</th>
+                        <th scope="col">Godišnji fond sati</th>
+                        <th scope="col">Predmet je uvjet za iduću godinu</th>
+                        <th scope="col">Opis predmeta</th>
                     </tr>
                 </thead>
                 <tbody>
