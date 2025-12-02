@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "NazivPredmeta":"Skriptni jezici",
+        "ime":"Ivana Milić",
+        "GodisnjiFondSati":64,
+        "UvjetGod":"DA",
+        "OpisPredmeta":"HTML,CSS"
+    },
+    {
+        "id":2,
+        "NazivPredmeta":"Operacijski sustavi",
+        "ime":"Antionio",
+        "GodisnjiFondSati":70,
+        "UvjetGod":"NE",
+        "OpisPredmeta":"Vrste i uloge OS"
+    },
+    {
+        "id":3,
+        "NazivPredmeta":"Matematika",
+        "ime":"Tomislav",
+        "GodisnjiFondSati":105,
+        "UvjetGod":"DA",
+        "OpisPredmeta":"Brojevi"
+    }
+]
