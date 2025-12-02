@@ -10,6 +10,24 @@
     <title> Prakticna </title>
 </head>
 <body>
+    <div>
+    <button type ="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Novi predmet
+    </button>
+    </div>
+    
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Naziv predmeta</th>
+                    <th scope="col">Ime profesora</th>
+                    <th scope="col">Godišnji fond sati</th>
+                    <th scope="col">Predmet je uvjet za iduću godinu</th>
+                    <th scope="col">Opis predmeta</th>
+                </tr>
+            </thead>
+
     
 
 </body>
