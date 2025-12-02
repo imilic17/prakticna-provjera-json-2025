@@ -75,6 +75,51 @@ $filter = $_GET['filter'] ?? '';
             </tbody>
         </table>
     </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="noviModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form method="POST" action="unos_predmeta.php">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Dodaj novi predmet</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <label class="form-label">Naziv predmeta</label>
+                        <input name="naziv" class="form-control" required>
+
+                        <label class="form-label mt-2">Ime profesora</label>
+                        <input name="profesor" class="form-control" required>
+
+                        <label class="form-label mt-2">Broj sati godišnje</label>
+                        <input type="number" name="sati" class="form-control" required>
+
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>    
+
+                        <label class="form-label mt-2">Opis predmeta</label>
+                        <textarea name="opis" class="form-control" required></textarea>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                        <button type="submit" class="btn btn-primary">Spremi</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
