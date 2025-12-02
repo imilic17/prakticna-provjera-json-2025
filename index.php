@@ -88,6 +88,7 @@ Dodaj novi predmet</button>
   <thead>
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">Naziv predmeta</th>
       <th scope="col">Ime profesora</th>
       <th scope="col">Godišnji fond sati</th>
       <th scope="col">Predmet je uvjet za iduću godinu</th>
@@ -104,6 +105,7 @@ Dodaj novi predmet</button>
                     {
                         foreach ($usersData as $key => $value)
                         {
+                            $id = $value['id'];
                             $naziv = $value['naziv'];
                             $profesor = $value['profesor'];
                             $fond_sati = $value['fond_sati'];
@@ -111,6 +113,7 @@ Dodaj novi predmet</button>
                             $opis = $value['opis'];
 
                             echo "<tr>
+                                <td>$id</td>
                                 <td>$naziv</td>
                                 <td>$profesor</td>
                                 <td>$fond_sati</td>
