@@ -41,12 +41,12 @@
             </thead>
             <tbody>
                 <?php
-                    $userString = file_get_contents(__DIR__."/predmeti.json");
-                    $usersData = json_decode($userString, true);
+                    $predmetString = file_get_contents(__DIR__."/predmeti.json");
+                    $predmetData = json_decode($userString, true);
 
-                    if (isset($usersData))
+                    if (isset($predmetData))
                     {
-                        foreach ($usersData as $key => $value)
+                        foreach ($predmetData as $key => $value)
                         {
                             $idPredmeta = $value['idPredmeta'];
                             $imePredmeta = $value['imePredmeta'];
