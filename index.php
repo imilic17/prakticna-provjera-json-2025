@@ -4,7 +4,7 @@
     $predmeti = json_decode($predmetString, true);
 
     
-
+    $filter = $_GET['filter'] ?? "";
 
 
     ?>
@@ -20,44 +20,40 @@
 </head>
 <body>
 
+    
+
+    <form class="row g-3 mb-4" method="GET">
+        <div class="col-sm-4">
+            <input type="text" name="filter" class="form-control" placeholder="Tražilica" value="<?= htmlspecialchars($filter)?>">
+            
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary">Traži</button>
+        </div>
+    </form>
+
+
+
     <div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Novi korisnik
+            Dodaj predmet
         </button>
     </div>
-
-
-
-
 
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ID</th>
+      <th scope="col">Naziv predmeta</th>
+      <th scope="col">Ime profesora</th>
+      <th scope="col">Godišnji fond sati</th>
+      <th scope="col">Predmet je uvjet za iduću godinu</th>
+      <th scope="col">Opis predmeta</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    
   </tbody>
 </table>
     
@@ -66,27 +62,37 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Dodaj novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="unos_korisnika.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">Ime</label>
-                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
+                            <label for="ime" class="form-label">Naziv predmeta</label>
+                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Naziv predmeta">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Prezime</label>
-                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
+                            <label for="prezime" class="form-label">Ime profesora</label>
+                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Ime profesora">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                            <label for="datumRodenja" class="form-label">Godišnji fond sati</label>
+                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Godišnji fond sati">
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                        Predmet je uvjet za iduću godinu
+                        </label>
+                        </div>
+                        <div class="mb-12">
+                            <label for="datumRodenja" class="form-label">Opis predmeta</label>
+                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Opis predmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
-                        <button type="submit" class="btn btn-primary">Spremi promjene</button>
+                        <button type="submit" class="btn btn-primary">Spremi</button>
                     </div>
                 </form>
             </div>
@@ -94,6 +100,8 @@
     </div>
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
