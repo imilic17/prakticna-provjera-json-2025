@@ -7,12 +7,15 @@ $filter = $_GET['filter'] ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predmeti</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body class="p-4">
 
     <div class="container">
@@ -21,7 +24,7 @@ $filter = $_GET['filter'] ?? '';
         <form class="row g-3 mb-4" method="GET">
             <div class="col-sm-4">
                 <input type="text" name="filter" class="form-control" placeholder="Upiši naziv predmeta..."
-                 value="<?php echo htmlspecialchars($filter) ?>">
+                    value="<?php echo htmlspecialchars($filter) ?>">
             </div>
             <div class="col-sm-2">
                 <button class="btn btn-primary">Traži</button>
@@ -43,9 +46,38 @@ $filter = $_GET['filter'] ?? '';
                     <th>Opis predmeta</th>
                 </tr>
             </thead>
-            
+            <tbody>
+                <?php
+                if (!empty($predmeti)) {
+                    foreach ($predmeti as $p) {
+                        if ($filter !== "") {
+                            $uNazivu = stripos($p['naziv'], $filter);
+                            $uProfesoru = stripos($p['profesor'], $filter);
+
+                            if ($uNazivu === false && $uProfesoru === false) {
+                                continue;
+                            }
+                        }
+
+                        $rowClass = (strtoupper($p['uvjet']) === 'DA') ? 'table-success' : 'table-danger';
+
+                        echo "<tr class='$rowClass'>
+                            <td>{$p['id']}</td>
+                            <td>{$p['naziv']}</td>
+                            <td>{$p['profesor']}</td>
+                            <td>{$p['sati_godisnje']}</td>
+                            <td>{$p['uvjet']}</td>
+                            <td>{$p['opis']}</td>
+                            </tr>";
+                    }
+                }
+                ?>
+            </tbody>
         </table>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
