@@ -104,7 +104,7 @@ $filter = $_GET['filter'] ?? '';
                         <div class="form-check mt-2">
                             <input class="form-check-input" type="checkbox" name="uvjet" id="uvjetCheckbox" value="DA">
                             <label class="form-check-label" for="uvjetCheckbox">
-                                Uvjet za iduću godinu (DA/NE)
+                                Uvjet za iduću godinu
                             </label>
                         </div>
 

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "naziv": "Matematika",
+        "profesor": "Tatijana Sekere\u0161",
+        "sati": 70,
+        "uvjet": "DA",
+        "opis": "Matematika IV"
+    },
+    {
+        "id": 2,
+        "naziv": "Tehni\u010dko i poslovno komuniciranje",
+        "profesor": "Miroslav Tomek",
+        "sati": 70,
+        "uvjet": "DA",
+        "opis": "Fusion"
+    }
+]
