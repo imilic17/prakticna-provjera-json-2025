@@ -1,1 +1,58 @@
-[{"idPredmeta":"1","imePredmeta":"Skriptni jezici i Web Programiranje","nazivProfesora":"Ivana Milić","godisnjiFondSati":"64","obavezan":"DA","opisPredmeta":"HTML, CSS, PHP, MySQL, JS"},{"idPredmeta":"2","imePredmeta":"Operacijski sustavi","nazivProfesora":"Antonio Milde","godisnjiFondSati":"70","obavezan":"NE","opisPredmeta":"Vrste i uloge OS-a"},{"idPredmeta":"3","imePredmeta":"Sigurnost informacijskih sustava","nazivProfesora":"Ivana Milić","godisnjiFondSati":"64","obavezan":"NE","opisPredmeta":"Sigurnost po slojevima"}, {"idPredmeta":"4","imePredmeta":"Matematika","nazivProfesora":"Tomislav","godisnjiFondSati":"105","obavezan":"DA","opisPredmeta":"Samo za najjače"}, {"idPredmeta":"5","imePredmeta":"Poslužiteljski operacijski sustavi","nazivProfesora":"Kulhavi","godisnjiFondSati":"64","obavezan":"DA","opisPredmeta":"Vrste i uloge poslužiteljskih OS-a"}, {"idPredmeta":"6","imePredmeta":"Tehničko i poslovno komuniciranje","nazivProfesora":"Mik","godisnjiFondSati":"32","obavezan":"NE","opisPredmeta":"Uči se komunicirati u poslovnom okruženju"}]
+[
+    {
+        "idPredmeta": "1",
+        "imePredmeta": "Skriptni jezici i Web Programiranje",
+        "nazivProfesora": "Ivana Mili\u0107",
+        "godisnjiFondSati": "64",
+        "obavezan": "DA",
+        "opisPredmeta": "HTML, CSS, PHP, MySQL, JS"
+    },
+    {
+        "idPredmeta": "2",
+        "imePredmeta": "Operacijski sustavi",
+        "nazivProfesora": "Antonio Milde",
+        "godisnjiFondSati": "70",
+        "obavezan": "NE",
+        "opisPredmeta": "Vrste i uloge OS-a"
+    },
+    {
+        "idPredmeta": "3",
+        "imePredmeta": "Sigurnost informacijskih sustava",
+        "nazivProfesora": "Ivana Mili\u0107",
+        "godisnjiFondSati": "64",
+        "obavezan": "NE",
+        "opisPredmeta": "Sigurnost po slojevima"
+    },
+    {
+        "idPredmeta": "4",
+        "imePredmeta": "Matematika",
+        "nazivProfesora": "Tomislav",
+        "godisnjiFondSati": "105",
+        "obavezan": "DA",
+        "opisPredmeta": "Samo za najja\u010de"
+    },
+    {
+        "idPredmeta": "5",
+        "imePredmeta": "Poslu\u017eiteljski operacijski sustavi",
+        "nazivProfesora": "Kulhavi",
+        "godisnjiFondSati": "64",
+        "obavezan": "DA",
+        "opisPredmeta": "Vrste i uloge poslu\u017eiteljskih OS-a"
+    },
+    {
+        "idPredmeta": "6",
+        "imePredmeta": "Tehni\u010dko i poslovno komuniciranje",
+        "nazivProfesora": "Mik",
+        "godisnjiFondSati": "32",
+        "obavezan": "NE",
+        "opisPredmeta": "U\u010di se komunicirati u poslovnom okru\u017eenju"
+    },
+    {
+        "idPredmeta": null,
+        "imePredmeta": "Hrvatski",
+        "nazivProfesora": null,
+        "godisnjiFondSati": "105",
+        "obavezan": null,
+        "opisPredmeta": "Dosadan"
+    }
+]

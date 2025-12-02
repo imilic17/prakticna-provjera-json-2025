@@ -17,7 +17,7 @@
             <form class="row g-3">
                 
                 <div class="col-sm-3">
-                    <input placeholder="ime ososbe" type="text" name="osoba" class="form-control" id="osoba">
+                <input placeholder="ime ososbe" type="text" name="osoba" class="form-control" id="osoba">
                 </div>
 
                 <div class="col-sm-3">

@@ -42,7 +42,7 @@
             <tbody>
                 <?php
                     $predmetString = file_get_contents(__DIR__."/predmeti.json");
-                    $predmetData = json_decode($userString, true);
+                    $predmetData = json_decode($predmetString, true);
 
                     if (isset($predmetData))
                     {
@@ -87,8 +87,8 @@
                             <input type="text" class="form-control" name="imePredmeta" id="imePredmeta" placeholder="Ime">
                         </div>
                         <div class="mb-12">
-                            <label for="imeProfesora" class="form-label">Ime profesora</label>
-                            <input type="text" class="form-control" name="imeProfesora" id="imeProfesora" placeholder="Ime profesora">
+                            <label for="nazivProfesora" class="form-label">Ime profesora</label>
+                            <input type="text" class="form-control" name="nazivProfesora" id="nazivProfesora" placeholder="Ime profesora">
                         </div>
                         <div class="mb-12">
                             <label for="godisnjiFondSati" class="form-label">Godišnji fond sati</label>
