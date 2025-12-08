@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
-        .zeleni-red {
-            background-color: green !important;
-        }
+        table.table tr.zeleni-red:nth-child(even),
+table.table tr.zeleni-red:hover {
+    background-color: #d4edda !important;
+}
+
     </style>
     <title>Prakticna Provjera</title>
   </head>
@@ -55,15 +57,25 @@
                         <?php
                         $jsonFile = 'predmeti.json';
                         $predmeti = [];
+                        
                         if(file_exists($jsonFile)){
                             $jsonData=file_get_contents($jsonFile);
                             $predmeti=json_decode($jsonData,true);
+                        }
+                        $pretraga = isset($_GET['pretraga']) ? strtolower($_GET['pretraga']) : '';
+                        if (!empty($pretraga)){
+                            $predmeti = array_filter($predmeti, function($predmet) use ($pretraga){
+                                return strpos(strtolower($predmet['ime']), $pretraga) !== false
+                                || strpos(strtolower($predmet['profesor']), $pretraga) !== false
+                                || strpos(strtolower($predmet['opis']), $pretraga) !== false;
+                            });
                         }
                         if (empty($predmeti)) {
                             echo '<tr><td colspan="6" class="text-center">Nema podataka o predmetima.</td></tr>';
                         } else {
                             foreach ($predmeti as $predmet) {
-                                $klasa = ($predmet['uvjet'] === 'DA') ? 'zeleni-red' : '';
+                                $klasa = (isset($predmet['uvjet']) && strtoupper(trim($predmet['uvjet'])) === 'DA') ? 'zeleni-red' : '';
+
                                 echo '<tr class="'. $klasa .'">';
                                 echo '<td>' . htmlspecialchars($predmet['id']) . '</td>';
                                 echo '<td>' . htmlspecialchars($predmet['ime']) . '</td>';
