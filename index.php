@@ -4,9 +4,6 @@
     $predmeti = json_decode($predmetString, true);
 
     
-    
-
-
     ?>
 
 <!DOCTYPE html>
@@ -47,7 +44,6 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">Naziv predmeta</th>
       <th scope="col">Ime profesora</th>
       <th scope="col">Godišnji fond sati</th>
@@ -59,6 +55,30 @@
 
   <?php
 
+    
+        if(isset($predmeti)){    
+
+        foreach($predmeti as $key => $value){
+
+        
+        $naziv = $value['naziv'] ?? '';
+        $ime = $value['ime'] ?? '';
+        $fond = $value['fond'] ?? '';
+        $uvjet = $value['uvjet'] ?? '';
+        $opis = $value['opis'] ?? '';
+
+            echo"<tr>
+                    
+                    <td>$naziv</td>
+                    <td>$ime</td>
+                    <td>$fond</td>
+                    <td>$uvjet</td>
+                    <td>$opis</td>
+                </tr>";
+        }
+
+    }
+        
     
 
 
@@ -77,7 +97,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Dodaj novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="unos_korisnika.php" method="POST">
+                <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
                             <label for="ime" class="form-label">Naziv predmeta</label>
