@@ -1,1 +1,23 @@
-[{"naziv":"Matematika","ime":"Ivano","fond":"27","uvjet":"on","opis":"ovo je fizika"}]
+[
+    {
+        "naziv": "Matematika",
+        "ime": "Ivano",
+        "fond": "27",
+        "uvjet": "on",
+        "opis": "ovo je fizika"
+    },
+    {
+        "naziv": "Fizika",
+        "ime": "Tatjana Sekere\u0161",
+        "fond": "35",
+        "uvjet": null,
+        "opis": "bla"
+    },
+    {
+        "naziv": "Engleski",
+        "ime": "Antonia Varat",
+        "fond": "70",
+        "uvjet": "on",
+        "opis": "Engleski jezik"
+    }
+]

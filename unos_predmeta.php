@@ -7,6 +7,7 @@ $predmeti = json_decode($predmetiString, true);
 
 
 $user = array(
+    
     'naziv' => $_POST['naziv'],
     'ime' => $_POST['ime'],
     'fond' => $_POST['fond'],

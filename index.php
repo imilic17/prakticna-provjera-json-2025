@@ -55,29 +55,41 @@
 
   <?php
 
+        
+
     
         if(isset($predmeti)){    
 
-        foreach($predmeti as $key => $value){
-
+        $search = $_GET['osoba'] ?? '';
         
-        $naziv = $value['naziv'] ?? '';
-        $ime = $value['ime'] ?? '';
-        $fond = $value['fond'] ?? '';
-        $uvjet = $value['uvjet'] ?? '';
-        $opis = $value['opis'] ?? '';
+            foreach($predmeti as $key => $value){
 
-            echo"<tr>
-                    
-                    <td>$naziv</td>
-                    <td>$ime</td>
-                    <td>$fond</td>
-                    <td>$uvjet</td>
-                    <td>$opis</td>
-                </tr>";
-        }
+               
+                if ($search !== '' && 
+                    stripos($value['naziv'], $search) === false && 
+                    stripos($value['ime'], $search) === false) {
+                    continue;
+                }
+            
+                $naziv = $value['naziv'];
+                $ime = $value['ime'];
+                $fond = $value['fond'] ?? '';
+                $uvjet = $value['uvjet'] ? 'DA' : 'NE';
+                $opis = $value['opis'];
+            
+                echo "
+                    <tr>
+                        <td>$naziv</td>
+                        <td>$ime</td>
+                        <td>$fond</td>
+                        <td>$uvjet</td>
+                        <td>$opis</td>
+                    </tr>";
+            }
+            
 
     }
+
         
     
 
