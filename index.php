@@ -96,6 +96,12 @@
                                 }
                             }
 
+                            if($value['UvjetGod'] == 'DA'){
+                                $tr_class = 'table-success';
+                            } else {
+                                $tr_class = '';
+                            }
+
                             $id = $value['id'];
                             $NazivPredmeta = $value['NazivPredmeta'];
                             $ime = $value['ime'];
@@ -104,7 +110,7 @@
                             $OpisPredmeta = $value['OpisPredmeta'];
 
                             
-                            echo "<tr>
+                            echo "<tr class='$tr_class'>
                             <td>$id</td>
                             <td>$NazivPredmeta</td>
                                 <td>$ime</td>
