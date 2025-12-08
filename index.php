@@ -21,8 +21,9 @@
                 <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Naziv predmeta</th>
+                 <th scope="col">Ime Profesora</th>
                 <th scope="col">Fond sati(godišnji)</th>
-                <th scope="col">Uvjet za iduću godinu(true/false)</th>
+                <th scope="col">Uvjet za iduću godinu(DA/NE)</th>
                 <th scope="col">Opis predmeta</th>
                 </tr>
             </thead>
@@ -43,7 +44,12 @@
 
                             $godisnji_fond_sati=$value['godisnji-fond-sati'];
 
-                            $predmet_je_uvjet_za_iducu_godinu=$value['predmet-je-uvjet-za-iducu-godinu'];
+
+                            if($value['predmet-je-uvjet-za-iducu-godinu']){
+                                $predmet_je_uvjet_za_iducu_godinu = "DA";
+                            } else{ $predmet_je_uvjet_za_iducu_godinu = "NE"; }
+
+                           
 
                             $opis_predmeta=$value['opis-predmeta'];
 
@@ -57,7 +63,7 @@
                                 <td>$naziv_predmeta</td>
                                 <td>$ime_profesora</td>
                                  <td>$godisnji_fond_sati</td>
-                                  <td>$predmet_je_uvjet_za_iducu_godinua</td>
+                                  <td>$predmet_je_uvjet_za_iducu_godinu</td>
                                    <td>$opis_predmeta</td>
 
                             </tr>";
@@ -93,10 +99,20 @@
                             <input type="text" class="form-control" name="godisnji-fond-sati" id="godisnji-fond-sati" placeholder="Godisnji Fond Sati">
                         </div>
 
-                        <div class="mb-12">
-                            <label for="predmet-je-uvjet-za-iducu-godinu" class="form-label">Predmet je Uvjet za iducu godinu</label>
-                            <input type="text" class="form-control" name="predmet-je-uvjet-za-iducu-godinu" id="predmet-je-uvjet-za-iducu-godinu" placeholder="Predmet je uvjet za iducu godinu">
-                        </div>
+                        Uvjet za iduću godinu(DA/NE)
+
+                                                                   <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                      <label class="form-check-label" for="radioDefault1">
+                       Da
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+                      <label class="form-check-label" for="radioDefault2">
+                       Ne
+                      </label>
+                    </div>
 
 
                          <div class="mb-12">
