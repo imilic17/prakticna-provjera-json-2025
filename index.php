@@ -10,6 +10,27 @@
     <title> Prakticna </title>
 </head>
 <body>
+   
+
+<div class='container'>
+        <div class="row">
+            <form class="row g-2">
+                
+                
+
+                <div class="col-sm-2">
+                    <input placeholder="ime profesora" type="text" name="naziv" class="form-control" id="naziv">
+                </div>
+
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary">Traži predmet</button>
+                </div>
+
+            </form>
+        </div>
+
+
+
     <div>
     <button type ="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Novi predmet
@@ -20,6 +41,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID </th>
                     <th scope="col">Naziv predmeta</th>
                     <th scope="col">Ime profesora</th>
                     <th scope="col">Godišnji fond sati</th>
@@ -35,7 +57,8 @@
                     if (isset($usersData))
                     {
                         foreach ($usersData as $key => $value)
-                        {
+                        {   
+                            $id = $value['id'] ?? '';
                             $naziv = $value['naziv'];
                             $profesor = $value['profesor'];
                             $fondsati = $value['fondsati'] ?? '';
@@ -43,6 +66,7 @@
                             $opis = $value['opis'] ?? '';
 
                             echo "<tr>
+                                <td>$id</td>
                                 <td>$naziv</td>
                                 <td>$profesor</td>
                                 <td>$fondsati</td>
@@ -65,9 +89,13 @@
                 </div>
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
+                    <div class="mb-12">
+                            <label for="id" class="form-label">ID</label>
+                            <input type="text" class="form-control" name="naziv" id="id" placeholder="id">
+                        </div>
                         <div class="mb-12">
                             <label for="naziv" class="form-label">Naziv predmeta</label>
-                            <input type="text" class="form-control" name="naziv" id="maziv" placeholder="naziv">
+                            <input type="text" class="form-control" name="naziv" id="naziv" placeholder="naziv">
                         </div>
                         <div class="mb-12">
                             <label for="profesor" class="form-label">Ime profesora</label>

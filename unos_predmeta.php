@@ -3,7 +3,8 @@
     $userString = file_get_contents(__DIR__.'/predmeti.json');
     $usersData = json_decode($userString);
 
-    $user = array('naziv' => $_POST['naziv'], 
+    $user = array(  'id' => $_POST['id'],
+                    'naziv' => $_POST['naziv'], 
                     'profesor' => $_POST['profesor'],
                     'fondsati' => $_POST['fondsati'],
                     'uvjet' => $_POST['uvjet'],
