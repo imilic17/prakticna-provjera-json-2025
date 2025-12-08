@@ -65,6 +65,7 @@
                                     continue;
                                 }
                             }
+                            
 
 
                             $id = $value['id'] ?? '';
@@ -74,7 +75,9 @@
                             $uvjet = $value['uvjet'] ?? '';
                             $opis = $value['opis'] ?? '';
 
-                            echo "<tr>
+                            $tr_class = ($uvjet === 'DA') ? 'style="background-color: #d4edda; color: #155724;"' : '';
+
+                            echo "<tr $tr_class>
                                 <td>$id</td>
                                 <td>$naziv</td>
                                 <td>$profesor</td>
@@ -82,6 +85,9 @@
                                 <td>$uvjet</td>
                                 <td>$opis</td>
                             </tr>";
+                           
+                           
+                            
                         }   
                     }
                 ?>
@@ -115,9 +121,11 @@
                             <label for="fondsati" class="form-label">Godišnji fond sati</label>
                             <input type="text" class="form-control" name="fondsati" id="fondsati" placeholder="fondsati">
                         </div>
-                        <div class="mb-12">
-                            <label for="uvjet" class="form-label">Predmet je uvjet za iduću godinu</label>
-                            <input type="text" class="form-control" name="uvjet" id="uvjet" placeholder="uvjet">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="uvjet" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Predmet je uvjet za iduću godinu
+                            </label>
                         </div>
                         <div class="mb-12">
                             <label for="opis" class="form-label">Opis predmeta</label>

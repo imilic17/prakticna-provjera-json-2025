@@ -7,7 +7,7 @@
                     'naziv' => $_POST['naziv'], 
                     'profesor' => $_POST['profesor'],
                     'fondsati' => $_POST['fondsati'],
-                    'uvjet' => $_POST['uvjet'],
+                    'uvjet' => isset($_POST ['uvjet']) ? 'DA' : 'NE',
                     'opis' => $_POST['opis']);
     
     if (isset($usersData))
