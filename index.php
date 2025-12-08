@@ -44,6 +44,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Naziv predmeta</th>
       <th scope="col">Ime profesora</th>
       <th scope="col">Godišnji fond sati</th>
@@ -65,20 +66,25 @@
             foreach($predmeti as $key => $value){
 
                
-                if ($search !== '' && 
-                    stripos($value['naziv'], $search) === false && 
-                    stripos($value['ime'], $search) === false) {
+               
+                    if ($search !== '' && 
+                    stripos($value['naziv'], $search) === false && stripos($value['ime'], $search) === false) {
                     continue;
                 }
-            
+                $id = $value['id'];
                 $naziv = $value['naziv'];
                 $ime = $value['ime'];
                 $fond = $value['fond'] ?? '';
-                $uvjet = $value['uvjet'] ? 'DA' : 'NE';
+                $uvjetBool = $value['uvjet'];
+                $uvjet = $uvjetBool ? 'DA' : 'NE';
                 $opis = $value['opis'];
-            
+
+
+                $rowClass = $uvjetBool ? 'table-success' : '';
+
                 echo "
-                    <tr>
+                    <tr class='$rowClass'>
+                        <td>$id</td>
                         <td>$naziv</td>
                         <td>$ime</td>
                         <td>$fond</td>

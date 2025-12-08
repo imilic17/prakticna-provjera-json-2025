@@ -6,8 +6,17 @@ $predmetiString = file_get_contents($dir);
 $predmeti = json_decode($predmetiString, true);
 
 
+if(empty($predmeti)){
+    $newID = 1;
+}
+else{
+    $last = end($predmeti);
+    $newID = $last['id'] + 1;
+}
+
+
 $user = array(
-    
+    'id' => $newID,
     'naziv' => $_POST['naziv'],
     'ime' => $_POST['ime'],
     'fond' => $_POST['fond'],
