@@ -83,49 +83,53 @@
                     <h5 class="modal-title" id="exampleModalLabel">Novi Predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="unos_korisnika.php" method="POST">
-                    <div class="modal-body">
-                        <div class="mb-12">
-                            <label for="naziv-predmeta" class="form-label">Naziv Predmeta</label>
-                            <input type="text" class="form-control" name="naziv-predmeta" id="naziv-predmeta" placeholder="Naziv Predmeta">
-                        </div>
-                        <div class="mb-12">
-                            <label for="ime-profesora" class="form-label">Ime Profesora</label>
-                            <input type="text" class="form-control" name="ime-profesora" id="ime-profesora" placeholder="Ime Profesora">
-                        </div>
+                                   <form action="unos_predmeta.php" method="POST">
+                       <div class="modal-body">
 
-                        <div class="mb-12">
-                            <label for="godisnji-fond-sati" class="form-label">Godišnji fond sati</label>
-                            <input type="text" class="form-control" name="godisnji-fond-sati" id="godisnji-fond-sati" placeholder="Godisnji Fond Sati">
-                        </div>
+                           <div class="mb-12">
+                               <label for="naziv-predmeta" class="form-label">Naziv Predmeta</label>
+                               <input type="text" class="form-control" name="naziv-predmeta" id="naziv-predmeta" required>
+                           </div>
 
-                        Uvjet za iduću godinu(DA/NE)
+                           <div class="mb-12">
+                               <label for="ime-profesora" class="form-label">Ime Profesora</label>
+                               <input type="text" class="form-control" name="ime-profesora" id="ime-profesora" required>
+                           </div>
 
-                                                                   <div class="form-check">
-                      <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                      <label class="form-check-label" for="radioDefault1">
-                       Da
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
-                      <label class="form-check-label" for="radioDefault2">
-                       Ne
-                      </label>
-                    </div>
+                           <div class="mb-12">
+                               <label for="godisnji-fond-sati" class="form-label">Godišnji fond sati</label>
+                               <input type="number" class="form-control" name="godisnji-fond-sati" id="godisnji-fond-sati" required>
+                           </div>
 
+                           <label class="form-label mt-3">Uvjet za iduću godinu</label>
 
-                         <div class="mb-12">
-                            <label for="opis-predmeta" class="form-label">opis Predmeta</label>
-                            <input type="text" class="form-control" name="opis-predmeta" id="opis-predmeta" placeholder="Opis Predmeta">
-                        </div>
-                       
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
-                        <button type="submit" class="btn btn-primary">Spremi promjene</button>
-                    </div>
+                           <div class="form-check">
+                               <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" value="Da" required>
+                               <label class="form-check-label" for="radioDefault1">
+                                   Da
+                               </label>
+                           </div>
+
+                           <div class="form-check">
+                               <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" value="Ne" checked>
+                               <label class="form-check-label" for="radioDefault2">
+                                   Ne
+                               </label>
+                           </div>
+
+                           <div class="mb-12 mt-3">
+                               <label for="opis-predmeta" class="form-label">Opis Predmeta</label>
+                               <input type="text" class="form-control" name="opis-predmeta" id="opis-predmeta" required>
+                           </div>
+
+                       </div>
+
+                       <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                           <button type="submit" class="btn btn-primary">Spremi promjene</button>
+                       </div>
                 </form>
+
             </div>
         </div>
     </div>

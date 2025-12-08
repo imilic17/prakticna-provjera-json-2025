@@ -1,1 +1,18 @@
-[{"id":1,"naziv-predmeta":"Skriptni","ime-profesora":"Ivana Milić","godisnji-fond-sati":25,"predmet-je-uvjet-za-iducu-godinu":false,"opis-predmeta":"Najbolji predmet ikad(pliz dajte 5)"}]
+[
+    {
+        "id": 1,
+        "naziv-predmeta": "Skriptni",
+        "ime-profesora": "Ivana Mili\u0107",
+        "godisnji-fond-sati": 25,
+        "predmet-je-uvjet-za-iducu-godinu": false,
+        "opis-predmeta": "Najbolji predmet ikad(pliz dajte 5)"
+    },
+    {
+        "id": 2,
+        "naziv-predmeta": "Hrvatski",
+        "ime-profesora": "ENEMEM",
+        "godisnji-fond-sati": 23,
+        "predmet-je-uvjet-za-iducu-godinu": true,
+        "opis-predmeta": "NE SVI\u0110A MI SE"
+    }
+]
