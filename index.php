@@ -58,6 +58,15 @@
                     {
                         foreach ($usersData as $key => $value)
                         {   
+                            if ($_GET != null && $_GET['naziv'] != null && $_GET['naziv'] != '')
+                            {
+                                if (strpos($value['profesor'], $_GET['naziv']) === false)
+                                {
+                                    continue;
+                                }
+                            }
+
+
                             $id = $value['id'] ?? '';
                             $naziv = $value['naziv'];
                             $profesor = $value['profesor'];
@@ -89,9 +98,10 @@
                 </div>
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
+
                     <div class="mb-12">
                             <label for="id" class="form-label">ID</label>
-                            <input type="text" class="form-control" name="naziv" id="id" placeholder="id">
+                            <input type="text" class="form-control" name="id" id="id" placeholder="id">
                         </div>
                         <div class="mb-12">
                             <label for="naziv" class="form-label">Naziv predmeta</label>
