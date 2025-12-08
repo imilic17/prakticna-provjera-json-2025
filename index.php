@@ -12,8 +12,10 @@
 
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <input class="form-control mr-sm-2" type="search" name="filter" placeholder="Search" aria-label="Search"
+    value="<?php if (isset($_GET['filter'])) { echo $_GET['filter']; } ?>"
+    >
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Traži</button>
   </form>
 </nav>
 
@@ -86,6 +88,14 @@
                     {
                         foreach ($predmetiJson as $key => $value)
                         {
+                            if (isset($_GET['filter']) && $_GET['filter'] != '')
+                            {
+                                if (stripos($value['NazivPredmeta'], $_GET['filter']) === false )
+                                {
+                                    continue;
+                                }
+                            }
+
                             $id = $value['id'];
                             $NazivPredmeta = $value['NazivPredmeta'];
                             $ime = $value['ime'];
