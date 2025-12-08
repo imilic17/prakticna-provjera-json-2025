@@ -65,6 +65,8 @@
                            
 
                             echo "<tr>
+                                <td>$ID</td>
+
                                 <td>$naziv_predmeta</td>
                                 <td>$ime_profesora</td>
                                 <td>$godisnji_fond_sati</td>
@@ -88,8 +90,10 @@
                     <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="unos_korisnika.php" method="POST">
+                <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
+                  
+                        
                         <div class="mb-12">
                             <label for="naziv_predmeta" class="form-label">Naziv predmeta</label>
                             <input type="text" class="form-control" name="naziv_predmeta" id="naziv_predmeta" placeholder="naziv predmeta">
