@@ -8,6 +8,15 @@
 
 </head>
 <body>
+
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Novi korisnik
         </button>
@@ -33,10 +42,12 @@
                             <label for="GodisnjiFondSati" class="form-label">Godisnji Fond Sati</label>
                             <input type="text" class="form-control" name="GodisnjiFondSati" id="GodisnjiFondSati" placeholder="GodisnjiFondSati">
                         </div>
-                        <div class="mb-12">
-                            <label for="UvjetGod" class="form-label">Predmet je uvijet za iduću godinu</label>
-                            <input type="text" class="form-control" name="UvjetGod" id="UvjetGod" placeholder="UvjetGod">
-                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="DA" id="UvjetGod">
+                        <label class="form-check-label" for="checkIndeterminate">
+                            Uvjet za iduću godinu
+                        </label>
+                    </div>
                         <div class="mb-12">
                             <label for="OpisPredmeta" class="form-label">Opis predmeta</label>
                             <input type="text" class="form-control" name="OpisPredmeta" id="OpisPredmeta" placeholder="OpisPredmeta">
