@@ -8,6 +8,29 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+
+<div class='container mt-4'>
+    <div class="row">
+        <form class="row g-3" method="GET">
+
+            <div class="col-sm-3">
+                <input placeholder="Naziv predmeta" type="text" name="naziv" class="form-control" id="naziv"
+                       value="<?php echo isset($_GET['naziv']) ? $_GET['naziv'] : '' ?>">
+            </div>
+
+            
+
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary">Traži</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
             <div>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Novi Predmet
@@ -35,39 +58,44 @@
                     if (isset($predmetData))
                     {
                         foreach ($predmetData as $key => $value)
-                        {
-                            $id = $value['id'];
+                                            {
+                                                
+                                                $id = $value['id'];
+                                                $naziv = $value['naziv-predmeta'];
+                                                $profesor = $value['ime-profesora'];
+                                                $fond = $value['godisnji-fond-sati'];
+                                                $uvjetBool = $value['predmet-je-uvjet-za-iducu-godinu'];
+                                                $uvjetString = $uvjetBool ? "DA" : "NE";
+                                                $opis = $value['opis-predmeta'];
+                                            
+                                           
+                                                $trazeno = true;
+                                            
+                                               
+                                                if (!empty($_GET['naziv'])) {
+                                                    if (stripos($naziv, $_GET['naziv']) === false) {
+                                                        $trazeno = false;
+                                                    }
+                                                }
+                                            
+                                                
+                                               
+                                            
+                                             
+                                                $redklasa = $trazeno ? "table-success" : "";
 
-                            $naziv_predmeta=$value['naziv-predmeta'];
-
-                            $ime_profesora=$value['ime-profesora'];
-
-                            $godisnji_fond_sati=$value['godisnji-fond-sati'];
-
-
-                            if($value['predmet-je-uvjet-za-iducu-godinu']){
-                                $predmet_je_uvjet_za_iducu_godinu = "DA";
-                            } else{ $predmet_je_uvjet_za_iducu_godinu = "NE"; }
-
-                           
-
-                            $opis_predmeta=$value['opis-predmeta'];
+                                                echo "
+                                                <tr class='$redklasa'>
+                                                    <td>$id</td>
+                                                    <td>$naziv</td>
+                                                    <td>$profesor</td>
+                                                    <td>$fond</td>
+                                                    <td>$uvjetString</td>
+                                                    <td>$opis</td>
+                                                </tr>";
+                                            }
 
 
-                           
-
-                            
-    
-                            echo "<tr>
-                                <td>$id</td>
-                                <td>$naziv_predmeta</td>
-                                <td>$ime_profesora</td>
-                                 <td>$godisnji_fond_sati</td>
-                                  <td>$predmet_je_uvjet_za_iducu_godinu</td>
-                                   <td>$opis_predmeta</td>
-
-                            </tr>";
-                        }
                     }
                 ?>
                 

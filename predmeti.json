@@ -14,5 +14,13 @@
         "godisnji-fond-sati": 23,
         "predmet-je-uvjet-za-iducu-godinu": true,
         "opis-predmeta": "NE SVI\u0110A MI SE"
+    },
+    {
+        "id": 3,
+        "naziv-predmeta": "OVO",
+        "ime-profesora": "Ivan",
+        "godisnji-fond-sati": 69,
+        "predmet-je-uvjet-za-iducu-godinu": true,
+        "opis-predmeta": "NE SVI\u0110A MI SE"
     }
 ]
