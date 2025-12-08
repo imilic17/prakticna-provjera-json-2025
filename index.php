@@ -26,7 +26,7 @@
                 </div>
                 <div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Novi korisnik
+            Novi predmet
         </button>   
             </form>
         </div>
@@ -54,6 +54,7 @@
                     {
                         foreach ($predmetData as $key => $value)
                         {
+                            $id = $value['id'];
                             $naziv_predmeta = $value['naziv_predmeta'];
                             $ime_profesora = $value['ime_profesora'];
                             $godisnji_fond_sati = $value['godisnji_fond_sati'];
@@ -65,7 +66,7 @@
                            
 
                             echo "<tr>
-                                <td>$ID</td>
+                                <td>$id</td>
 
                                 <td>$naziv_predmeta</td>
                                 <td>$ime_profesora</td>
@@ -87,7 +88,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="unos_predmeta.php" method="POST">
