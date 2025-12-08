@@ -3,9 +3,9 @@
     $usersData = json_decode($userString); 
 
 
-    $predmet = array('id' => $_POST['noviID'], 'naziv' => $_POST['naziv'], 'profesor' => $_POST['profesor'],
+    $predmet = array('id' => $_POST['id'], 'naziv' => $_POST['naziv'], 'profesor' => $_POST['profesor'],
      'fond_sati' => $_POST['fond_sati'], 'uvjet' => isset($_POST['uvjet']) ? 'DA' : 'NE',  'opis' => $_POST['opis']);
-    if (isset($usersData) && is_array($usersData))
+    if (isset($usersData))
     {
         $usersData[] = $predmet;
     }
