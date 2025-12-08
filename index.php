@@ -24,8 +24,13 @@
                 <div class="col-sm-2">
                     <button type="submit" class="btn btn-primary">Trazi predmet</button>
                 </div>
+                <div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Novi korisnik
+        </button>   
             </form>
         </div>
+        
         <div class="row">
             <table class="table">
                 <thead>
@@ -41,10 +46,81 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+                    $predmetString = file_get_contents(__DIR__."/predmeti.json");
+                    $predmetData = json_decode($predmetString, true);
+
+                    if (isset($predmetData))
+                    {
+                        foreach ($predmetData as $key => $value)
+                        {
+                            $naziv_predmeta = $value['naziv_predmeta'];
+                            $ime_profesora = $value['ime_profesora'];
+                            $godisnji_fond_sati = $value['godisnji_fond_sati'];
+
+                            $predmet_je_uvjet = $value['predmet_je_uvjet'];
+                            $opis_predmeta = $value['opis_predmeta'];
+
+
+                           
+
+                            echo "<tr>
+                                <td>$naziv_predmeta</td>
+                                <td>$ime_profesora</td>
+                                <td>$godisnji_fond_sati</td>
+                                <td>$predmet_je_uvjet</td>
+                                <td>$opis_predmeta</td>
+
+
+                            </tr>";
+                        }
+                    }
+                ?>
+               
                    
                 </tbody>
             </table>
         </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="unos_korisnika.php" method="POST">
+                    <div class="modal-body">
+                        <div class="mb-12">
+                            <label for="naziv_predmeta" class="form-label">Naziv predmeta</label>
+                            <input type="text" class="form-control" name="naziv_predmeta" id="naziv_predmeta" placeholder="naziv predmeta">
+                        </div>
+                        <div class="mb-12">
+                            <label for="ime_profesora" class="form-label">Ime profesora</label>
+                            <input type="text" class="form-control" name="ime_profesora" id="ime_profesora" placeholder="ime profesora">
+                        </div>
+                        <div class="mb-12">
+                            <label for="godisnji_fond_sati" class="form-label">Godisnji fond sati</label>
+                            <input type="text" class="form-control" name="godisnji_fond_sati" id="godisnji_fond_sati" placeholder="fond sati koji se mora godisnje odraditi">
+                        </div>
+                        <div class="mb-12">
+                            <div class="from-check">
+                             <input type="checkbox" class="form-check-input" name="predmet_je_uvjet" id="predmet_je_uvjet" >
+                            <label for="predmet_je_uvjet" class="form-check-label">Predmet je uvjet za iducu godinu</label>
+                           
+                        </div>
+                        <div class="mb-12">
+                            <label for="opis_predmeta" class="form-label">Opis predmeta</label>
+                            <input type="text" class="form-control" name="opis_predmeta" id="opis_predmeta" placeholder="Opis">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                        <button type="submit" class="btn btn-primary">Spremi promjene</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
     </div>
 
    
