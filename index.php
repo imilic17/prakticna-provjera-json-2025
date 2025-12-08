@@ -15,14 +15,14 @@
             </div>
 
 
-            <div>
+     <div>
         <table class="table">
             <thead>
                 <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Naziv predmeta</th>
                 <th scope="col">Fond sati(godišnji)</th>
-                <th scope="col">Uvjet za iduću godinu(DA/NE)</th>
+                <th scope="col">Uvjet za iduću godinu(true/false)</th>
                 <th scope="col">Opis predmeta</th>
                 </tr>
             </thead>
@@ -68,6 +68,53 @@
             </tbody>
         </table>
     </div>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Novi Predmet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="unos_korisnika.php" method="POST">
+                    <div class="modal-body">
+                        <div class="mb-12">
+                            <label for="naziv-predmeta" class="form-label">Naziv Predmeta</label>
+                            <input type="text" class="form-control" name="naziv-predmeta" id="naziv-predmeta" placeholder="Naziv Predmeta">
+                        </div>
+                        <div class="mb-12">
+                            <label for="ime-profesora" class="form-label">Ime Profesora</label>
+                            <input type="text" class="form-control" name="ime-profesora" id="ime-profesora" placeholder="Ime Profesora">
+                        </div>
+
+                        <div class="mb-12">
+                            <label for="godisnji-fond-sati" class="form-label">Godišnji fond sati</label>
+                            <input type="text" class="form-control" name="godisnji-fond-sati" id="godisnji-fond-sati" placeholder="Godisnji Fond Sati">
+                        </div>
+
+                        <div class="mb-12">
+                            <label for="predmet-je-uvjet-za-iducu-godinu" class="form-label">Predmet je Uvjet za iducu godinu</label>
+                            <input type="text" class="form-control" name="predmet-je-uvjet-za-iducu-godinu" id="predmet-je-uvjet-za-iducu-godinu" placeholder="Predmet je uvjet za iducu godinu">
+                        </div>
+
+
+                         <div class="mb-12">
+                            <label for="opis-predmeta" class="form-label">opis Predmeta</label>
+                            <input type="text" class="form-control" name="opis-predmeta" id="opis-predmeta" placeholder="Opis Predmeta">
+                        </div>
+                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                        <button type="submit" class="btn btn-primary">Spremi promjene</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 
