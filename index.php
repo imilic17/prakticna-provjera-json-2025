@@ -40,14 +40,14 @@
                             $profesor = $value['profesor'];
                             $fondsati = $value['fondsati'] ?? '';
                             $uvjet = $value['uvjet'] ?? '';
-                            $opis = $value['Opis'] ?? '';
+                            $opis = $value['opis'] ?? '';
 
                             echo "<tr>
                                 <td>$naziv</td>
                                 <td>$profesor</td>
                                 <td>$fondsati</td>
                                 <td>$uvjet</td>
-                                <td>$Opis</td>
+                                <td>$opis</td>
                             </tr>";
                         }   
                     }

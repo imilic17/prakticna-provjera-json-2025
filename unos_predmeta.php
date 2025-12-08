@@ -19,7 +19,7 @@
     }
     $newString = json_encode($usersData);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
-    header("Location: http://localhost/FranMarosiPrakticna/prakticna-provjera-json-2025/unos_predmeta.php");        
+    header("Location: http://localhost/FranMarosiPrakticna/prakticna-provjera-json-2025/index.php");        
     die();
 
 ?>
