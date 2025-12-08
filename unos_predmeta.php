@@ -10,12 +10,14 @@ if (!empty($predmetiJson)) {
     $nextId = max($id1) + 1;
 }
 
+$uvjet = isset($_POST['UvjetGod']) ? $_POST['UvjetGod'] : 'NE';
+
 $predmet = array(
     'id' => $nextId,
     'NazivPredmeta' => $_POST['NazivPredmeta'],
     'ime' => $_POST['ime'],
     'GodisnjiFondSati' => $_POST['GodisnjiFondSati'],
-    'UvjetGod' => $_POST['UvjetGod'],
+    'UvjetGod' => $uvjet,
     'OpisPredmeta' => $_POST['OpisPredmeta']
 );
 

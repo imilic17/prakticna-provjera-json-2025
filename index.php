@@ -18,7 +18,7 @@
 </nav>
 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Novi korisnik
+            Novi predmet
         </button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -43,8 +43,8 @@
                             <input type="text" class="form-control" name="GodisnjiFondSati" id="GodisnjiFondSati" placeholder="GodisnjiFondSati">
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="DA" id="UvjetGod">
-                        <label class="form-check-label" for="checkIndeterminate">
+                        <input class="form-check-input" type="checkbox" value="DA" id="UvjetGod" name="UvjetGod">
+                        <label class="form-check-label" for="UvjetGod">
                             Uvjet za iduću godinu
                         </label>
                     </div>
