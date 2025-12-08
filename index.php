@@ -8,71 +8,87 @@
 </head>
 <body>
 <div class='container'>
-        <div class="row">
-            <form class="row g-3">
-                
-                
-
-                <div class="col-sm-3">
-                    <input placeholder="" type="text" name="predmet" class="form-control" id="predmet">
-                </div>
-
-                <div class="col-sm-2">
-                    <button type="submit" class="btn btn-primary">Trazi predmet</button>
-                </div>
-            </form>
-        </div>
-<div>
+    <div class="row">
+        <form class="row g-3">
+            <div class="col-sm-3">
+                <input placeholder="Unesite naziv predmeta" type="text" name="predmet" class="form-control" id="predmet" value="<?php echo isset($_GET['predmet']) ? htmlspecialchars($_GET['predmet']) : ''; ?>">
+            </div>
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary">Traži predmet</button>
+            </div>
+           
+        </form>
+    </div>
+    
+    <div class="mt-3">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Novi predmet
         </button>
     </div>
-<div>
+    
+    <div class="mt-3">
         <table class="table">
             <thead>
                 <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Ime predmeta</th>
-                <th scope="col">Naziv profesora</th>
-                <th scope="col">Godišnji fond sati</th>
-                <th scope="col">Predmet je uvjet za iduću godinu</th>
-                <th scope="col">Opis predmeta</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Ime predmeta</th>
+                    <th scope="col">Naziv profesora</th>
+                    <th scope="col">Godišnji fond sati</th>
+                    <th scope="col">Predmet je uvjet za iduću godinu</th>
+                    <th scope="col">Opis predmeta</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    $predmetString = file_get_contents(__DIR__."/predmeti.json");
-                    $predmetData = json_decode($predmetString, true);
-
-                    if (isset($predmetData))
-                    {
-                        foreach ($predmetData as $key => $value)
-                        {
-                            $idPredmeta = $value['idPredmeta'];
-                            $imePredmeta = $value['imePredmeta'];
-                            $nazivProfesora = $value['nazivProfesora'];
-                            $godisnjiFondSati = $value['godisnjiFondSati'];
-                            $obavezan = $value['obavezan'];
-                            $opisPredmeta = $value['opisPredmeta'];
-                           
-
-                            
-    
-                            echo "<tr>
-                                <td>$idPredmeta</td>
-                                <td>$imePredmeta</td>
-                                <td>$nazivProfesora</td>
-                                <td>$godisnjiFondSati</td>
-                                <td>$obavezan</td>
-                                <td>$opisPredmeta</td>
-                            </tr>";
-                        }
-                    }
-                ?>
+                $predmetString = file_get_contents(__DIR__."/predmeti.json");
+                $predmetData = json_decode($predmetString, true);
                 
+                if ($predmetData === null) {
+                    echo "<tr><td colspan='6'>Greška pri učitavanju podataka</td></tr>";
+                } else {
+                    $searchTerm = '';
+                    if (isset($_GET['predmet']) && $_GET['predmet'] != '') {
+                        $searchTerm = trim($_GET['predmet']);
+                    }
+                    
+                    $counter = 0;
+                    foreach ($predmetData as $key => $value) {
+                        $idPredmeta = $value['idPredmeta'] ?? '';
+                        $imePredmeta = $value['imePredmeta'] ?? '';
+                        $nazivProfesora = $value['nazivProfesora'] ?? '';
+                        $godisnjiFondSati = $value['godisnjiFondSati'] ?? '';
+                        $obavezan = $value['obavezan'] ?? '';
+                        $opisPredmeta = $value['opisPredmeta'] ?? '';
+                        
+                        if ($searchTerm != '') {
+                            if (stripos($imePredmeta, $searchTerm) === false) {
+                                continue;
+                            }
+                        }
+                        
+                        $obavezanText = (strtoupper($obavezan) == 'DA' || $obavezan == true || $obavezan == 'true' || $obavezan == 1) ? 'Da' : 'Ne';
+                        
+                        echo "<tr>
+                            <td>" . ($idPredmeta !== null ? $idPredmeta : '') . "</td>
+                            <td>" . htmlspecialchars($imePredmeta) . "</td>
+                            <td>" . htmlspecialchars($nazivProfesora) . "</td>
+                            <td>" . htmlspecialchars($godisnjiFondSati) . "</td>
+                            <td>" . $obavezanText . "</td>
+                            <td>" . htmlspecialchars($opisPredmeta) . "</td>
+                        </tr>";
+                        
+                        $counter++;
+                    }
+                    
+                    if ($counter == 0) {
+                        echo "<tr><td colspan='6'>Nema pronađenih predmeta</td></tr>";
+                    }
+                }
+                ?>
             </tbody>
         </table>
     </div>
+    
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -82,25 +98,27 @@
                 </div>
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
-                        <div class="mb-12">
+                        <div class="mb-3">
                             <label for="imePredmeta" class="form-label">Naziv predmeta</label>
-                            <input type="text" class="form-control" name="imePredmeta" id="imePredmeta" placeholder="Ime">
+                            <input type="text" class="form-control" name="imePredmeta" id="imePredmeta" placeholder="Unesite naziv predmeta" required>
                         </div>
-                        <div class="mb-12">
+                        <div class="mb-3">
                             <label for="nazivProfesora" class="form-label">Ime profesora</label>
-                            <input type="text" class="form-control" name="nazivProfesora" id="nazivProfesora" placeholder="Ime profesora">
+                            <input type="text" class="form-control" name="nazivProfesora" id="nazivProfesora" placeholder="Unesite ime profesora" required>
                         </div>
-                        <div class="mb-12">
+                        <div class="mb-3">
                             <label for="godisnjiFondSati" class="form-label">Godišnji fond sati</label>
-                            <input type="text" class="form-control" name="godisnjiFondSati" id="godinsjiFondSati" placeholder="Godišnji fond sati">
+                            <input type="number" class="form-control" name="godisnjiFondSati" id="godisnjiFondSati" placeholder="Unesite godišnji fond sati" required>
                         </div>
-                        <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="obavezan" value="obavezan">
-  <label class="form-check-label" for="obavezan">Predmet je uvjet za iduću godinu</label>
-</div>
-<div class="mb-12">
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="obavezan" id="obavezan" value="1">
+                                <label class="form-check-label" for="obavezan">Predmet je uvjet za iduću godinu</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
                             <label for="opisPredmeta" class="form-label">Opis predmeta</label>
-                            <input type="text" class="form-control" name="opisPredmeta" id="opisPredmeta" placeholder="Opis predmeta">
+                            <textarea class="form-control" name="opisPredmeta" id="opisPredmeta" placeholder="Unesite opis predmeta" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -113,8 +131,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
-
 </body>
 </html>
