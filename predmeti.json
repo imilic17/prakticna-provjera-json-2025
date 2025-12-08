@@ -24,10 +24,11 @@
         "opis": "Sigurnost po slojevima"
     },
     {
+        "id": 4,
         "ime": "Matematika",
         "profesor": "Tomislav",
         "sati": 0,
         "uvjet": "DA",
-        "opis": "Samo za najjače"
+        "opis": "samo za najjače"
     }
 ]
