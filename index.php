@@ -16,16 +16,13 @@
 $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
  $data =  json_decode($predmetiString, true);
 
-  $user = array('ime predmeta' => $_POST['ime_predmeta'], 'Naziv profesora' => $_POST['naziv_profesora'], 'Godisnji_fond_sati' => $_POST['godisnji_fond_sati'], 'je_li_predmet_uvijet_za_sljedecu_godinu' => $_POST['je_li_predmet_uvijet_za_sljedecu_godinu'], 'opis_predmeta' => $_POST['opis_predmeta']);
-    if (isset($data))
-    {
-        $data[] = $user;
+  $predmetiString= file_get_contents(__DIR__.'/predmeti.json');
+  if($predmetiString){
+    $data = json_decode($predmetiString, true);
+    if($data === null){
+      $data = [];
     }
-    else
-    {
-        $data = array($user);
-    }
-
+  }
     $newString = json_encode($data);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
 
