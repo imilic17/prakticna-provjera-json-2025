@@ -52,7 +52,7 @@
                                 <td>
                                     <?php 
                                     
-                                    echo $predmet['je_preduvjet'] ? '<span class="badge bg-success">Da</span>' : '<span class="badge bg-danger">Ne</span>'; 
+                                    echo $predmet['je_preduvjet'] ? '<span class="badge bg-success">DA</span>' : '<span class="badge bg-danger">NE</span>'; 
                                     ?>
                                 </td>
                                 <td><?php echo htmlspecialchars($predmet['opis_predmeta']); ?></td>
