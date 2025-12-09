@@ -40,10 +40,10 @@
   <tbody>
     <?php
     $predmetiString =file_get_contents(__DIR__.'/predmeti.json');
-    $predemti = json_decode ($predmetiString,true);
-    if (isset($usersData))
+    $predmeti = json_decode ($predmetiString,true);
+    if (isset($predmeti))
                     {
-                        foreach ($predemti as $key => $value)
+                        foreach ($predmeti as $key => $value)
                         {
                             $nazivPredmeta = $value['ime_predmeta'];
                             $imeProfesora = $value['naziv_profesora'];
