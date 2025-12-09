@@ -15,7 +15,14 @@
 <?php 
  $jsonFile = __DIR__.'/predmeti.json';
  $data =  json_decode($predmetiString, true);
- 
+ $predmetiString = '';
+ if(!file_exists($jsonFile)){
+    if(!is_writable(__DIR__)){
+      echo '<div class="container mt-3"><div class="alert alert-danger" role="alert"> JSON datoteka ne postoji i direktorij nije upisiv. Provjerite dozvole.</div></div>';
+      exit;
+    }
+    file_put_contents($jsonFile, json_encode([], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+  }
 
   $predmetiString= file_get_contents($jsonFile);
   if($predmetiString){
