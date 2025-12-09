@@ -1,16 +1,1 @@
-[
-    {
-        "ime_predmeta": "Pero",
-        "naziv_profesora": "PEri\u0107",
-        "godisnji_fond": "85",
-        "uvjet_za_iducu_godinu": "",
-        "opis_predmeta": "sdfdsf"
-    },
-    {
-        "ime_predmeta": "Marko",
-        "naziv_profesora": "Mari\u0107",
-        "godisnji_fond": "85",
-        "uvjet_za_iducu_godinu": null,
-        "opis_predmeta": "sdfsd"
-    }
-]
+[{"ime_predmeta":"Pero","naziv_profesora":"PEri\u0107","godisnji_fond":"85","uvjet_za_iducu_godinu":"","opis_predmeta":"sdfdsf"},{"ime_predmeta":"Marko","naziv_profesora":"Mari\u0107","godisnji_fond":"85","uvjet_za_iducu_godinu":null,"opis_predmeta":"sdfsd"},{"ime_predmeta":"web dizajn","naziv_profesora":"husek","godisnji_fond":"32","uvjet_za_iducu_godinu":"","opis_predmeta":"ucimo kako napraviti web stranicu"}]
