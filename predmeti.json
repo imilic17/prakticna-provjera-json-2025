@@ -1,13 +1,26 @@
-{
-  "predmetnaData:" [
-      {"ID":1, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-     {"ID":2, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-     {"ID":3, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-     {"ID":4, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-     {"ID":5, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-     {"ID":6, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-     {"ID":7, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-     {"ID":8, "naziv":"Matematika", "profesor":"Tatjana Sekeres" "sati": 150, "opis": "Nizovi i derivacije"},
-
-    ]
-    }
+[
+  {
+    "id_predmeta": 1,
+    "ime_predmeta": "Matematika",
+    "naziv_profesora": "Tatjana Sekeres",
+    "godisnji_fond_sati": 120,
+    "je_preduvjet": true,
+    "opis_predmeta": "Analiza matematičkih koncepata bitnih za IT."
+  },
+  {
+    "id_predmeta": 2,
+    "ime_predmeta": "Hrvatski jezik",
+    "naziv_profesora": "Žana Kovačević",
+    "godisnji_fond_sati": 90,
+    "je_preduvjet": false,
+    "opis_predmeta": "Gradivo za struku"
+  },
+  {
+    "id_predmeta": 3,
+    "ime_predmeta": "Engleski jezik",
+    "naziv_profesora": "Antonia Varat",
+    "godisnji_fond_sati": 60,
+    "je_preduvjet": false,
+    "opis_predmeta": "Tehnički engleski za struku."
+  }
+]
