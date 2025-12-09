@@ -83,15 +83,15 @@
   <?php 
   if(!empty($data)){
     echo '
-      <table class="table-light">
+    <table class="table table-light table-striped">
         <thead>
-          <tr>
-            <th>Ime predmeta</th>
-            <th>Naziv profesora</th>
-            <th>Godišnji fond sati</th>
-            <th>Uvjet za sljedeću godinu</th>
-            <th>Opis predmeta</th>
-          </tr>
+            <tr>
+                <th>Ime predmeta</th>
+                <th>Naziv profesora</th>
+                <th>Godišnji fond sati</th>
+                <th>Uvjet za sljedeću godinu</th>
+                <th>Opis predmeta</th>
+            </tr>
         </thead>
         <tbody>';
   $count = 1;
