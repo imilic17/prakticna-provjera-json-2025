@@ -23,8 +23,17 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
       $data = [];
     }
   }
-    $newString = json_encode($data);
-    file_put_contents(__DIR__.'/predmeti.json', $newString);
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $novi_predmet = [
+      'ime_predmeta' => $_POST['ime_predmeta'] ?? '',
+      'naziv_profesora' => $_POST['naziv_profesora'] ?? '',
+      'godisnji_fond_sati' => $_POST['godisnji_fond_sati'] ?? '',
+      'je_li_predmet_uvijet_za_sljedecu_godinu' => isset($_POST['je_li_predmet_uvijet_za_sljedecu_godinu']) ? true : false,
+      'opis_predmeta' => $_POST['opis_predmeta'] ?? ''
+    ];
+    $data[] = $novi_predmet;
+  }
 
     foreach ($data as $key => $value)
                         {
