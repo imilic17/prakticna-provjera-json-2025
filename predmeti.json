@@ -1,30 +1,26 @@
 [
     {
-        "ime_predmeta": "Hrvatski",
-        "naziv_profesora": "Žana ",
-        "godisnji_fond_sati": "105",
-        "je_li_predmet_uvijet_za_sljedecu_godinu": true,
-        "opis_predmeta": "Učenje  općih gramatičkih i književnih pravila"
-    },
-    {
+        "id": 1,
         "ime_predmeta": "Matematika",
         "naziv_profesora": "Tatijana Sekereš",
         "godisnji_fond_sati": "106",
         "je_li_predmet_uvijet_za_sljedecu_godinu": true,
-        "opis_predmeta": "MATEMATIKA"
+        "opis_predmeta": "56"
     },
     {
+        "id": 2,
+        "ime_predmeta": "Hrvatski",
+        "naziv_profesora": "Žana ",
+        "godisnji_fond_sati": "105",
+        "je_li_predmet_uvijet_za_sljedecu_godinu": true,
+        "opis_predmeta": "hrvatski"
+    },
+    {
+        "id": 1,
         "ime_predmeta": "Ugradbeni",
         "naziv_profesora": "KRAL",
-        "godisnji_fond_sati": "67",
+        "godisnji_fond_sati": "45",
         "je_li_predmet_uvijet_za_sljedecu_godinu": false,
-        "opis_predmeta": "mikro upravljači ali dosadnije"
-    },
-    {
-        "ime_predmeta": "TPKS",
-        "naziv_profesora": "Tomek",
-        "godisnji_fond_sati": "46",
-        "je_li_predmet_uvijet_za_sljedecu_godinu": false,
-        "opis_predmeta": "NEKA POSLOVNA KOMUNIKACIJA"
+        "opis_predmeta": "KRALL"
     }
 ]

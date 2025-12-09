@@ -16,6 +16,8 @@
  $jsonFile = __DIR__.'/predmeti.json';
  $data =  json_decode($predmetiString, true);
  $predmetiString = '';
+ $id = $last['id'];
+
  if(!file_exists($jsonFile)){
     if(!is_writable(__DIR__)){
       echo '<div class="container mt-3"><div class="alert alert-danger" role="alert"> JSON datoteka ne postoji i direktorij nije upisiv. Provjerite dozvole.</div></div>';
@@ -34,6 +36,7 @@
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $novi_predmet = [
+      "id" => $id+1,
       'ime_predmeta' => $_POST['ime_predmeta'] ?? '',
       'naziv_profesora' => $_POST['naziv_profesora'] ?? '',
       'godisnji_fond_sati' => $_POST['godisnji_fond_sati'] ?? '',
@@ -86,6 +89,7 @@
     <table class="table table-light table-striped">
         <thead>
             <tr>
+             <th>ID</th>
                 <th>Ime predmeta</th>
                 <th>Naziv profesora</th>
                 <th>Godišnji fond sati</th>
@@ -102,6 +106,7 @@
 
     echo '
       <tr class="'.$rowClass.'">
+        <td>'.htmlspecialchars($predmet['id']).'</td>
         <td>'.htmlspecialchars($predmet['ime_predmeta']).'</td>
         <td>'.htmlspecialchars($predmet['naziv_profesora']).'</td>
         <td>'.htmlspecialchars($predmet['godisnji_fond_sati']).'</td>
