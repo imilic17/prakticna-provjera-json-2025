@@ -45,11 +45,11 @@
                     {
                         foreach ($predemti as $key => $value)
                         {
-                            $nazivPredmeta = $value['predmet'];
-                            $imeProfesora = $value['profesor'];
-                            $godisnjiFondSati = $value['fond'];
-                            $uvjetZaSljedecuGodinu = $value['uvjet'];
-                            $opis = $value['opis'];
+                            $nazivPredmeta = $value['ime_predmeta'];
+                            $imeProfesora = $value['naziv_profesora'];
+                            $godisnjiFondSati = $value['godisnji_fond'];
+                            $uvjetZaSljedecuGodinu = $value['uvjet_za_iducu_godinu'];
+                            $opis = $value['opis_predmeta'];
                             echo "<tr>
                                 <td> </td>
                                 <td>$nazivPredmeta</td>
