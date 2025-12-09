@@ -41,9 +41,6 @@
     <?php
     $predmetiString =file_get_contents(__DIR__.'/predmeti.json');
     $predemti = json_decode ($predmetiString,true);
-    if($jsonuser == null){
-        echo 'JSON nije validan';
-    }
     if (isset($usersData))
                     {
                         foreach ($predemti as $key => $value)
@@ -78,16 +75,24 @@
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">Ime predmeta</label>
-                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime predmeta">
+                            <label for="ime_predmeta" class="form-label">Ime predmeta</label>
+                            <input type="text" class="form-control" name="ime_predmeta" id="ime_predmeta" placeholder="Ime predmeta">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Prezime</label>
-                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
+                            <label for="naziv_profesora" class="form-label">Naziv profesora</label>
+                            <input type="text" class="form-control" name="naziv_profesora" id="naziv_profesora" placeholder="Naziv profesora">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Datum rođenja</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                            <label for="godisnji_fond" class="form-label">Godišnji fond sati</label>
+                            <input type="text" class="form-control" name="godisnji_fond" id="godisnji_fond" placeholder="Godišnji fond sati">
+                        </div>
+                       <div class="form-check">
+                            <label class="form-check-label" for="uvjet_za_iducu_godinu">Je li predmet uvjet za iducu godinu</label>
+                            <input class="form-check-input" type="checkbox" value="" id="uvjet_za_iducu_godinu" name="uvjet_za_iducu_godinu">
+                        </div>
+                        <div class="mb-12">
+                            <label for="opis_predmeta" class="form-label">Opis predmeta</label>
+                            <input type="text" class="form-control" name="opis_predmeta" id="opis_predmeta" placeholder="Opis predmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
