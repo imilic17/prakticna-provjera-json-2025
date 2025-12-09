@@ -51,6 +51,7 @@
                             $uvjetZaSljedecuGodinu = $value['uvjet_za_iducu_godinu'];
                             $opis = $value['opis_predmeta'];
                             echo "<tr>
+                                <td></td>
                                 <td>$nazivPredmeta</td>
                                 <td>$imeProfesora</td>
                                 <td>$godisnjiFondSati</td>
@@ -63,7 +64,7 @@
   </tbody>
 </table>
 
-
+<!--Model-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
