@@ -8,18 +8,19 @@
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-</head>
+</head>        
 
 <body>
  
 <?php 
-$predmetiString = file_get_contents(__DIR__.'/predmeti.json');
+ $jsonFile = __DIR__.'/predmeti.json';
  $data =  json_decode($predmetiString, true);
+ 
 
-  $predmetiString= file_get_contents(__DIR__.'/predmeti.json');
+  $predmetiString= file_get_contents($jsonFile);
   if($predmetiString){
     $data = json_decode($predmetiString, true);
-    if($data === null){
+    if($data === null || !is_array($data)){
       $data = [];
     }
   }
@@ -34,7 +35,7 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
     ];
     $data[] = $novi_predmet;
     $newString = json_encode($data,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-    if(file_put_contents($jsonFIle, $newString)!== false){
+    if(file_put_contents($jsonFile, $newString)!== false){
       echo '<div class="container mt-3"><div class="alert alert-success" role="alert"> Predmet je uspješno dodan i pohranjen!</div></div>';
     }
     else{
@@ -75,7 +76,7 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
   <?php 
   if(!empty($data)){
     echo '
-      <table class="table-dark">
+      <table class="table-light">
         <thead>
           <tr>
             <th>Ime predmeta</th>
@@ -88,7 +89,7 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
         <tbody>';
   $count = 1;
   foreach($data as $predmet){
-    $isUvijet = (isset($predmet['je_li_predmet_uvijet_za_sljedecu_godinu']) && $predmet['je_li_predmet_uvijet_za_sljedecu_godinu'] === 'Da');
+    $isUvijet = isset($predmet['je_li_predmet_uvijet_za_sljedecu_godinu']) && $predmet['je_li_predmet_uvijet_za_sljedecu_godinu'] === true;
   
     $rowClass = $isUvijet ? "uvijet-za-prolaz" :"";
 
@@ -97,12 +98,13 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
         <td>'.htmlspecialchars($predmet['ime_predmeta']).'</td>
         <td>'.htmlspecialchars($predmet['naziv_profesora']).'</td>
         <td>'.htmlspecialchars($predmet['godisnji_fond_sati']).'</td>
-        <td>'.($isUvijet ? 'Da' : 'Ne').'</td>
+        <td>'.($isUvijet ? 'true' : 'false').'</td>
         <td>'.htmlspecialchars($predmet['opis_predmeta']).'</td>
       </tr>';
   } 
   echo"</tbody></table>";}
-  else{
+  else
+  {
     echo"<div class='alert alert-info'>Trenutno nema unesenih predmeta</div>";
   }
   ?>
