@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "naziv_predmeta": "Web Dizajn",
+        "ime_profesora": "Dražen Hušek",
+        "godisnji_fond_sati": "64",
+        "predmet_je_uvjet": "on",
+        "opis_predmeta": "HTML, CSS, JS"
+    }
+]

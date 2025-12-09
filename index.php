@@ -40,6 +40,43 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+                    $predmetString = file_get_contents(__DIR__."/predmeti.json");
+                    $predmetData = json_decode($predmetString, true);
+
+                    if (isset($predmetData))
+                    {
+                        foreach ($predmetData as $key => $value)
+                        {
+                            $id = $value['id'];
+                            $naziv_predmeta = $value['naziv_predmeta'];
+                            $ime_profesora = $value['ime_profesora'];
+                            $godisnji_fond_sati = $value['godisnji_fond_sati'];
+
+                            $predmet_je_uvjet = $value['predmet_je_uvjet'];
+                            $opis_predmeta = $value['opis_predmeta'];
+
+
+                           
+
+                            echo "<tr>
+                                <td>$id</td>
+
+                                <td>$naziv_predmeta</td>
+                                <td>$ime_profesora</td>
+                                <td>$godisnji_fond_sati</td>
+                                <td>$predmet_je_uvjet</td>
+                                <td>$opis_predmeta</td>
+
+
+                            </tr>";
+                        }
+                    }
+                ?>
+               
+                   
+                </tbody>
+            </table>
 
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
