@@ -106,7 +106,10 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
     echo"<div class='alert alert-info'>Trenutno nema unesenih predmeta</div>";
   }
   ?>
-  
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
