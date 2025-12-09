@@ -17,5 +17,23 @@
 
  
   </head>
+  <body>
+  <div class='container'>
+        <div class="row">
+            <form class="row g-3">
+                
+             
+
+                <div class="col-sm-3">
+                    <input  type="text" name="zadatak" class="form-control" id="zadatak">
+                </div>
+
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary">Trazi predmet</button>
+                </div>
+                <div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Novi predmet
+        </button> 
 </body>
 </html>
