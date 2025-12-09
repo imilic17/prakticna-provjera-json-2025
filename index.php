@@ -25,6 +25,23 @@
         </button>
     </div>
 
+ <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Naziv predmeta</th>
+                        <th scope="col">Ime profesora</th>
+                        <th scope="col">Godišnji fond sati</th>
+                        <th scope="col">Predmet je uvjet za iduću godinu</th>
+                        <th scope="col">Opis predmeta</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -32,7 +49,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="unos_korisnika.php" method="POST">
+                <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
                             <label for="ime" class="form-label">Naziv predmeta</label>
