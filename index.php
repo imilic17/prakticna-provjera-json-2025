@@ -33,17 +33,17 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
       'opis_predmeta' => $_POST['opis_predmeta'] ?? ''
     ];
     $data[] = $novi_predmet;
-  }
-
-    foreach ($data as $key => $value)
-                        {
-                            $ime_predmeta = $value['ime_predmeta'];
-                            $naziv_profesora = $value['naziv_profesora'];
-                            $godisnji_fond_sati = $value['godisnji_fond_sati'] ?? '';
-                            $je_li_predmet_uvijet_za_sljedecu_godinu = $value['je_li_predmet_uvijet_za_sljedecu_godinu'] ?? '';
-                            $opis_predmeta = $value['opis_predmeta'] ??'';}
-
-
+    $newString = json_encode($data,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    if(file_put_contents($jsonFIle, $newString)!== false){
+      echo '<div class="container mt-3"><div class="alert alert-success" role="alert"> Predmet je uspješno dodan i pohranjen!</div></div>';
+    }
+    else{
+      echo '<div class="container mt-3"><div class="alert alert-danger" role="alert"> Greška pri pisanju u JSON datoteku. Provjerite dozvole.</div></div>';
+    }
+    } ?>
+  
+   
+    
 
      
  
