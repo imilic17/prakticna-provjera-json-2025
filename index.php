@@ -1,3 +1,7 @@
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -42,33 +46,31 @@
                         foreach ($usersData as $key => $value)
                         {
                             $nazivPredmeta = $value['nazivPredmeta'];
-                            
                             $imeProfesora = $value['imeProfesora'];
-                            
+                            $opisPredmeta = $value['opisPredmeta'];
+                            $godisnjiFondSati = $value['godisnjiFontSati'] ?? '';
 
-                            $godisnjiFondSati = $value['godisnjiFondSati'];
-                            $opisPredmeta = $value['opisPredmeta'] ?? '';
-
-                            // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
+                             $datumRodenja = (isset($value['nazivPredmeta'])) ? $value['nazivPredmeta'] : '';
                             
-                            // $datumRodenja = '';
-                            // if (isset($value['datumRodenja']) )
-                            // {
-                            //     $datumRodenja = $value['datumRodenja'];
-                            // }
+                             $datumRodenja = '';
+                             if (isset($value['nazivPredmeta']) )
+                             {
+                                 $nazivPredmeta = $value['nazivPredmeta'];
+                             }
                             
     
                             echo "<tr>
-                            
                                 <td>$nazivPredmeta</td>
                                 <td>$imeProfesora</td>
                                 <td>$godisnjiFondSati</td>
                                 <td>$opisPredmeta</td>
-                                
-                              
                             </tr>";
                         }
                     }
+    
+                            
+                        
+                    
                 ?>
                 
             </tbody>
@@ -82,7 +84,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Dodaj novi predmet</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="unos_korisnika.php" method="POST">
+                <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
                             <label for="nazivPredmeta" class="form-label">Naziv predmeta</label>
@@ -92,10 +94,14 @@
                             <label for="imeProfesora" class="form-label">Ime profesora</label>
                             <input type="text" class="form-control" name="imeProfesora" id="imeProfesora" placeholder="ime profesora">
                         </div>
+
+
                         <div class="mb-12">
                             <label for="godisnjiFondSati" class="form-label">Godišnji fond sati</label>
-                            <input type="text" class="form-control" name="godisnjiFondSati" id="godisnjiFondSati" placeholder="fond sati koji se mora godišnje odraditi">
+                            <input type="number" class="form-control" name="godisnjiFondSati" id="godisnjiFondSati" placeholder="fond sati koji se mora godišnje odraditi">
                         </div>
+
+                        
                         
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">

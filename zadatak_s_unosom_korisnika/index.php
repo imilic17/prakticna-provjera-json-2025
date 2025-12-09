@@ -39,13 +39,13 @@
 
                             $datumRodenja = $value['datumRodenja'] ?? '';
 
-                            // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
+                             $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
-                            // $datumRodenja = '';
-                            // if (isset($value['datumRodenja']) )
-                            // {
-                            //     $datumRodenja = $value['datumRodenja'];
-                            // }
+                             $datumRodenja = '';
+                             if (isset($value['datumRodenja']) )
+                             {
+                                 $datumRodenja = $value['datumRodenja'];
+                             }
                             
     
                             echo "<tr>
