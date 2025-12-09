@@ -68,7 +68,45 @@ $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
       <button type="submit" class="btn btn-primary">Dodaj predmet</button>
     </form>
   </div>
- 
+
+ <hr class="my-5">
+
+  <h2>Lista unesenih predmeta</h2>
+  <?php 
+  if(!empty($data)){
+    echo '
+      <table class="table-dark">
+        <thead>
+          <tr>
+            <th>Ime predmeta</th>
+            <th>Naziv profesora</th>
+            <th>Godišnji fond sati</th>
+            <th>Uvjet za sljedeću godinu</th>
+            <th>Opis predmeta</th>
+          </tr>
+        </thead>
+        <tbody>';
+  $count = 1;
+  foreach($data as $predmet){
+    $isUvijet = (isset($predmet['je_li_predmet_uvijet_za_sljedecu_godinu']) && $predmet['je_li_predmet_uvijet_za_sljedecu_godinu'] === 'Da');
+  
+    $rowClass = $isUvijet ? "uvijet-za-prolaz" :"";
+
+    echo '
+      <tr class="'.$rowClass.'">
+        <td>'.htmlspecialchars($predmet['ime_predmeta']).'</td>
+        <td>'.htmlspecialchars($predmet['naziv_profesora']).'</td>
+        <td>'.htmlspecialchars($predmet['godisnji_fond_sati']).'</td>
+        <td>'.($isUvijet ? 'Da' : 'Ne').'</td>
+        <td>'.htmlspecialchars($predmet['opis_predmeta']).'</td>
+      </tr>';
+  } 
+  echo"</tbody></table>";}
+  else{
+    echo"<div class='alert alert-info'>Trenutno nema unesenih predmeta</div>";
+  }
+  ?>
+  
 </body>
 
 </html>
