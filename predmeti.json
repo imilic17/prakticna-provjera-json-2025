@@ -1,10 +1,1 @@
-[
-    {
-        "id": 1,
-        "naziv_predmeta": "Web Dizajn",
-        "ime_profesora": "Dražen Hušek",
-        "godisnji_fond_sati": "64",
-        "predmet_je_uvjet": "on",
-        "opis_predmeta": "HTML, CSS, JS"
-    }
-]
+[{"id":1,"naziv_predmeta":"Web Dizajn","ime_profesora":"Dra\u017een Hu\u0161ek","godisnji_fond_sati":"64","predmet_je_uvjet":"on","opis_predmeta":"HTML, CSS, JS"},{"id":1,"naziv_predmeta":"Matematika","ime_profesora":"Tatjana Sekere\u0161","godisnji_fond_sati":"96","predmet_je_uvjet":null,"opis_predmeta":"Zbrajanje,Oduzimanje,Dijeljenje,Mno\u017eenje"}]

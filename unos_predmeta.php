@@ -24,6 +24,6 @@
     $newString = json_encode($predmetData);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
 
-    header("Location: http://localhost/zadatak_s_unosom_korisnika/index.php");
+    header("Location: index.php");
     die();
 ?>

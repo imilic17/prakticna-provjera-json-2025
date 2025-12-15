@@ -98,16 +98,16 @@
                         </div>
                         <div class="mb-12">
                             <label for="datumRodenja" class="form-label">Godišnji fond sati</label>
-                            <input type="text" class="form-control" name="odradeno-sati" id="odradeno-sati" placeholder="Fond sati koji se mora godišnje odraditi.">
+                            <input type="text" class="form-control" name="godisnji_fond_sati" id="odradeno-sati" placeholder="Fond sati koji se mora godišnje odraditi.">
                         </div>
                         <div class="col-12">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="uvjet" required>
+                            <input class="form-check-input" type="checkbox" value="predmet_je_uvjet" id="uvjet" required>
                             <label class="form-check-label" for="invalidCheck">Predmet je uvjet za iduću godinu</label>
                         </div>
                         <div class="mb-12">
                             <label for="datumRodenja" class="form-label">Opis predmeta</label>
-                            <input type="text" class="form-control" name="opis-predmeta" id="opis-predmeta" placeholder="Opis predmeta">
+                            <input type="text" class="form-control" name="opis_predmeta" id="opis-predmeta" placeholder="Opis predmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
