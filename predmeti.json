@@ -22,5 +22,13 @@
         "godisnji_fond_sati": "45",
         "je_li_predmet_uvijet_za_sljedecu_godinu": false,
         "opis_predmeta": "KRALL"
+    },
+    {
+        "id": 1,
+        "ime_predmeta": "TPKS",
+        "naziv_profesora": "Tomek",
+        "godisnji_fond_sati": "79",
+        "je_li_predmet_uvijet_za_sljedecu_godinu": false,
+        "opis_predmeta": "HIHU"
     }
 ]

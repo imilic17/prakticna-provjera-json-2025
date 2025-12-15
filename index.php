@@ -14,8 +14,8 @@
  
 <?php 
  $jsonFile = __DIR__.'/predmeti.json';
- $data =  json_decode($predmetiString, true);
  $predmetiString = '';
+ $data =  json_decode($predmetiString, true);
  $id = $last['id'];
 
  if(!file_exists($jsonFile)){
@@ -36,7 +36,7 @@
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $novi_predmet = [
-      "id" => $id+1,
+      "id" => ++$id,
       'ime_predmeta' => $_POST['ime_predmeta'] ?? '',
       'naziv_profesora' => $_POST['naziv_profesora'] ?? '',
       'godisnji_fond_sati' => $_POST['godisnji_fond_sati'] ?? '',
