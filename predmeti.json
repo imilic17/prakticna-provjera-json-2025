@@ -1,50 +1,66 @@
 [
-  {
-    "id_predmeta": 1,
-    "ime_predmeta": "Skriptni jezici i web programiranje",
-    "naziv_profesora": "Ivana Milić",
-    "godisnji_fond_sati": 64,
-    "je_preduvjet": true,
-    "opis_predmeta": "HTML, CSS, PHP, MySQL, JS"
-  },
-  {
-    "id_predmeta": 2,
-    "ime_predmeta": "Operacijski sustavi",
-    "naziv_profesora": "Antonio",
-    "godisnji_fond_sati": 70,
-    "je_preduvjet": false,
-    "opis_predmeta": "Vrste i uloge OS-a"
-  },
-  {
-    "id_predmeta": 3,
-    "ime_predmeta": "Sigurnost informacijskih sustava",
-    "naziv_profesora": "Ivana",
-    "godisnji_fond_sati": 64,
-    "je_preduvjet": false,
-    "opis_predmeta": "Sigurnost po slojevima"
-  },
-  {
-    "id_predmeta": 4,
-    "ime_predmeta": "Matematika",
-    "naziv_profesora": "Tomislav",
-    "godisnji_fond_sati": 105,
-    "je_preduvjet": true,
-    "opis_predmeta": "Samo za najače"
-  },
-  {
-    "id_predmeta": 5,
-    "ime_predmeta": "Posluziteljski operacijski sustavi",
-    "naziv_profesora": "Kulhavi",
-    "godisnji_fond_sati": 64,
-    "je_preduvjet": true,
-    "opis_predmeta": "Vrste i uloge poslužiteljskih OS-a" 
-  },
-  {
-    "id_predmeta": 6,
-    "ime_predmeta": "Tehničko i poslovno komuniciranje",
-    "naziv_profesora": "Mik",
-    "godisnji_fond_sati": 32,
-    "je_preduvjet": false,
-    "opis_predmeta": "Uči se u komunicirati u poslovnom okruženju"
-  }
+    {
+        "id_predmeta": 1,
+        "ime_predmeta": "Skriptni jezici i web programiranje",
+        "naziv_profesora": "Ivana Milić",
+        "godisnji_fond_sati": 64,
+        "je_preduvjet": true,
+        "opis_predmeta": "HTML, CSS, PHP, MySQL, JS"
+    },
+    {
+        "id_predmeta": 2,
+        "ime_predmeta": "Operacijski sustavi",
+        "naziv_profesora": "Antonio",
+        "godisnji_fond_sati": 70,
+        "je_preduvjet": false,
+        "opis_predmeta": "Vrste i uloge OS-a"
+    },
+    {
+        "id_predmeta": 3,
+        "ime_predmeta": "Sigurnost informacijskih sustava",
+        "naziv_profesora": "Ivana",
+        "godisnji_fond_sati": 64,
+        "je_preduvjet": false,
+        "opis_predmeta": "Sigurnost po slojevima"
+    },
+    {
+        "id_predmeta": 4,
+        "ime_predmeta": "Matematika",
+        "naziv_profesora": "Tomislav",
+        "godisnji_fond_sati": 105,
+        "je_preduvjet": true,
+        "opis_predmeta": "Samo za najače"
+    },
+    {
+        "id_predmeta": 5,
+        "ime_predmeta": "Posluziteljski operacijski sustavi",
+        "naziv_profesora": "Kulhavi",
+        "godisnji_fond_sati": 64,
+        "je_preduvjet": true,
+        "opis_predmeta": "Vrste i uloge poslužiteljskih OS-a"
+    },
+    {
+        "id_predmeta": 6,
+        "ime_predmeta": "Tehničko i poslovno komuniciranje",
+        "naziv_profesora": "Mik",
+        "godisnji_fond_sati": 32,
+        "je_preduvjet": false,
+        "opis_predmeta": "Uči se u komunicirati u poslovnom okruženju"
+    },
+    {
+        "id_predmeta": "7",
+        "ime_predmeta": "fdgdg",
+        "naziv_profesora": "fgfg",
+        "godisnji_fond_sati": "33",
+        "je_preduvjet": true,
+        "opis_predmeta": "gfdgfdgfdg"
+    },
+    {
+        "id_predmeta": "8",
+        "ime_predmeta": "proba",
+        "naziv_profesora": "fdvdfv",
+        "godisnji_fond_sati": "1",
+        "je_preduvjet": true,
+        "opis_predmeta": "vdfvfd"
+    }
 ]
