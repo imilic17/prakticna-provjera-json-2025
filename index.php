@@ -43,6 +43,15 @@
                     {
                         foreach ($predmeti as $key => $value)
                         {
+                            $nazivPredmeta = '';
+                            if ($_GET != null && $_GET['ime_predmeta'] != null && $_GET['ime_predmeta'] != '')
+                            {
+                                if (strpos($value['ime_predmeta'], $_GET['ime_predmeta']) === false)
+                                {
+                                    continue;
+                                }
+                            }
+
                             $nazivPredmeta = $value['ime_predmeta'];
                             $imeProfesora = $value['naziv_profesora'];
                             $godisnjiFondSati = $value['godisnji_fond'];
@@ -56,19 +65,9 @@
                                 <td>$uvjetZaSljedecuGodinu</td>
                                 <td>$opis</td>
                                 </tr>";
+
                         }
                     }
-    
-    foreach ($predmeti as $predmetiKey => $predmetiValue){
-                            $nazivPredmeta = '';
-                            if ($_GET != null && $_GET['ime_predmeta'] != null && $_GET['ime_predmeta'] != '')
-                            {
-                                if (strpos($predmetiValue['ime_predmeta'], $_GET['ime_predmeta']) === false)
-                                {
-                                    continue;
-                                }
-                            }
-                        }
     ?>
   </tbody>
 </table>
