@@ -14,6 +14,63 @@
 
     
     <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#dodajPredmetModal"> Dodaj predmet</button>
+<!-- Modal -->
+<div class="modal fade" id="dodajPredmetModal" tabindex="-1" aria-labelledby="dodajPredmetLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="dodajPredmetLabel">Dodaj novi predmet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form method="POST">
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label class="form-label">ID Predmeta</label>
+            <input type="text" name="id_predmeta" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Ime Predmeta</label>
+            <input type="text" name="ime_predmeta" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Naziv Profesora</label>
+            <input type="text" name="naziv_profesora" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Godišnji fond sati</label>
+            <input type="number" name="godisnji_fond_sati" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Je li preduvjet?</label>
+            <select name="je_preduvjet" class="form-select">
+              <option value="1">DA</option>
+              <option value="0">NE</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Opis predmeta</label>
+            <textarea name="opis_predmeta" class="form-control" rows="3"></textarea>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+          <button type="submit" name="spremi_predmet" class="btn btn-primary">Spremi</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
 
 
     <?php
