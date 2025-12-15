@@ -11,20 +11,18 @@
     <div class="container">
         <div class="row">
             <form class="row g-3">
-                
                 <div class="col-sm-3">
-                    <input type="text" name="predmet" class="form-control" id="preedmet">
+                    <input type="text" name="ime_predmeta" class="form-control" id="ime_predmeta">
                 </div>
-
                 <div class="col-sm-2">
                     <button type="submit" class="btn btn-primary">Trazi</button>
                 </div>
             </form>
         </div>
+
         <!-- Dugme za unos predmeta -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Dodaj predmet
-</button>
+         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Dodaj predmet</button>
+         
 <!--Tablica-->
 <table class="table">
   <thead>
@@ -60,6 +58,17 @@
                                 </tr>";
                         }
                     }
+    
+    foreach ($predmeti as $predmetiKey => $predmetiValue){
+                            $nazivPredmeta = '';
+                            if ($_GET != null && $_GET['ime_predmeta'] != null && $_GET['ime_predmeta'] != '')
+                            {
+                                if (strpos($predmetiValue['ime_predmeta'], $_GET['ime_predmeta']) === false)
+                                {
+                                    continue;
+                                }
+                            }
+                        }
     ?>
   </tbody>
 </table>

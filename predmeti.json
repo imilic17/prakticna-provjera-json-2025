@@ -19,5 +19,12 @@
         "godisnji_fond": "32",
         "uvjet_za_iducu_godinu": "",
         "opis_predmeta": "ucimo kako napraviti web stranicu"
+    },
+    {
+        "ime_predmeta": "hrvatski",
+        "naziv_profesora": "pero",
+        "godisnji_fond": "150",
+        "uvjet_za_iducu_godinu": null,
+        "opis_predmeta": ""
     }
 ]
