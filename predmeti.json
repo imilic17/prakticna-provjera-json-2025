@@ -1,34 +1,18 @@
 [
     {
         "id": 1,
-        "ime_predmeta": "Matematika",
-        "naziv_profesora": "Tatijana Sekereš",
-        "godisnji_fond_sati": "106",
+        "ime_predmeta": "Hrvatski",
+        "naziv_profesora": "Žana ",
+        "godisnji_fond_sati": "598",
         "je_li_predmet_uvijet_za_sljedecu_godinu": true,
-        "opis_predmeta": "56"
+        "opis_predmeta": "Ako je gramatika bila zločin književnost je bila kazna"
     },
     {
         "id": 2,
-        "ime_predmeta": "Hrvatski",
-        "naziv_profesora": "Žana ",
+        "ime_predmeta": "Matematika",
+        "naziv_profesora": "Tatijana Sekereš",
         "godisnji_fond_sati": "105",
         "je_li_predmet_uvijet_za_sljedecu_godinu": true,
-        "opis_predmeta": "hrvatski"
-    },
-    {
-        "id": 1,
-        "ime_predmeta": "Ugradbeni",
-        "naziv_profesora": "KRAL",
-        "godisnji_fond_sati": "45",
-        "je_li_predmet_uvijet_za_sljedecu_godinu": false,
-        "opis_predmeta": "KRALL"
-    },
-    {
-        "id": 1,
-        "ime_predmeta": "TPKS",
-        "naziv_profesora": "Tomek",
-        "godisnji_fond_sati": "79",
-        "je_li_predmet_uvijet_za_sljedecu_godinu": false,
-        "opis_predmeta": "HIHU"
+        "opis_predmeta": "Svi ti brojevi u životu i što si postiagao ništa "
     }
 ]

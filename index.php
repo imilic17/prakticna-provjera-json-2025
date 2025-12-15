@@ -14,9 +14,10 @@
  
 <?php 
  $jsonFile = __DIR__.'/predmeti.json';
+ $data=[];
  $predmetiString = '';
  $data =  json_decode($predmetiString, true);
- $id = $last['id'];
+ $nextId=1;
 
  if(!file_exists($jsonFile)){
     if(!is_writable(__DIR__)){
@@ -33,10 +34,18 @@
       $data = [];
     }
   }
+  if(!empty($data)){
+    $lastElement = end($data);
+    if(isset($lastElement["id"]) && is_numeric($lastElement["id"])){
+      $nextId = $lastElement["id"] + 1;
+    } else {
+      $nextId = count($data) + 1;
+    }
+  }
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $novi_predmet = [
-      "id" => ++$id,
+      "id" => $nextId,
       'ime_predmeta' => $_POST['ime_predmeta'] ?? '',
       'naziv_profesora' => $_POST['naziv_profesora'] ?? '',
       'godisnji_fond_sati' => $_POST['godisnji_fond_sati'] ?? '',
