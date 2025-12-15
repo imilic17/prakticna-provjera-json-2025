@@ -1,1 +1,33 @@
-[{"ime":"1","prezime":"Skriptni jezici i web programiranje","datumRodenja":"Ivana Milic","Godisnjifondsati":"64"},{"ime":"2","prezime":"Operacijski sustavi","datumRodenja":"Antonio"},{"ime":"3","prezime":"Sigurnost informacijskih sustava","datumRodenja":"Ivana"},{"ime":"4","prezime":"Matematika","datumRodenja":"Tomislav"},{"ime":"5","prezime":" Posluziteljski operacijski sustavi","datumRodenja":"Kulhavi"},{"ime":"6","prezime":" Tehničko i poslovno komuniciranje","datumRodenja":"Mik"}]
+[
+    {
+        "ime": "1",
+        "prezime": "Skriptni jezici i web programiranje",
+        "datumRodenja": "Ivana Milic",
+        "Godisnjifondsati": "64"
+    },
+    {
+        "ime": "2",
+        "prezime": "Operacijski sustavi",
+        "datumRodenja": "Antonio"
+    },
+    {
+        "ime": "3",
+        "prezime": "Sigurnost informacijskih sustava",
+        "datumRodenja": "Ivana"
+    },
+    {
+        "ime": "4",
+        "prezime": "Matematika",
+        "datumRodenja": "Tomislav"
+    },
+    {
+        "ime": "5",
+        "prezime": " Posluziteljski operacijski sustavi",
+        "datumRodenja": "Kulhavi"
+    },
+    {
+        "ime": "6",
+        "prezime": " Tehničko i poslovno komuniciranje",
+        "datumRodenja": "Mik"
+    }
+]
