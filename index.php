@@ -8,9 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <style>
     
-   .uvijet-za-prolaz {
-        background-color: #075733ff !important; 
-        border-left: 5px solid #0f5132;}
+   .uvijet-za-prolaz > td {
+        background-color: #26ba77ff !important;}
 </style>
 </head>
 
@@ -93,7 +92,7 @@ if (isset($_GET['status'])) {
             $rowClass = $isUvijet ? "uvijet-za-prolaz" :"";
 
             echo '
-            <tr class="'.$rowClass.'">
+                <tr class="'.$rowClass.'">
                 <td>'.htmlspecialchars($predmet['id']).'</td>
                 <td>'.htmlspecialchars($predmet['ime_predmeta']).'</td>
                 <td>'.htmlspecialchars($predmet['naziv_profesora']).'</td>
