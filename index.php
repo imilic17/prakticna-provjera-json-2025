@@ -74,6 +74,38 @@
 
 
     <?php
+    if (isset($_POST['spremi_predmet'])) {
+
+        $json_file = 'predmeti.json';
+    
+        // Učitaj postojeće podatke
+        $predmeti = [];
+        if (file_exists($json_file)) {
+            $predmeti = json_decode(file_get_contents($json_file), true);
+            if (!is_array($predmeti)) $predmeti = [];
+        }
+    
+        // Novi predmet
+        $novi_predmet = [
+            'id_predmeta' => $_POST['id_predmeta'],
+            'ime_predmeta' => $_POST['ime_predmeta'],
+            'naziv_profesora' => $_POST['naziv_profesora'],
+            'godisnji_fond_sati' => $_POST['godisnji_fond_sati'],
+            'je_preduvjet' => $_POST['je_preduvjet'] == "1",
+            'opis_predmeta' => $_POST['opis_predmeta']
+        ];
+    
+        // Dodaj u listu
+        $predmeti[] = $novi_predmet;
+    
+        // Spremi natrag u JSON
+        file_put_contents($json_file, json_encode($predmeti, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+    
+        // Refresh da se modal zatvori i tablica osvježi
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    }
+    
     
     $json_file = 'predmeti.json';
 
