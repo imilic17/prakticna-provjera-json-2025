@@ -13,7 +13,8 @@
     <h1 class="mb-4">Popis predmeta</h1>
 
     
-    <a href="" class="btn btn-primary mb-3">Dodaj predmet</a>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#dodajPredmetModal"> Dodaj predmet</button>
+
 
     <?php
     
