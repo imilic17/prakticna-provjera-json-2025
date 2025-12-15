@@ -9,28 +9,30 @@
     <title>Tablica</title>
 </head>
 <body>
-<div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Dodaj predmet
-        </button>
 <div class='container'>
         <div class="row">
             <form class="row g-3">
                 
+             
+
                 <div class="col-sm-3">
-                    <input placeholder="" type="text" name="" class="form-control" id="osoba">
+                    <input  type="text" name="zadatak" class="form-control" id="zadatak">
                 </div>
 
                 <div class="col-sm-2">
                     <button type="submit" class="btn btn-primary">Trazi predmet</button>
                 </div>
+                <div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Dodaj predmet
+        </button>   
             </form>
         </div>
         <div class="row">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Naziv predmeta</th>
                         <th scope="col">Ime profesora</th>
                         <th scope="col">Godišnji fond sati</th>
@@ -40,13 +42,14 @@
                 </thead>
                 <tbody>
                 <?php
-                    $userString = file_get_contents(__DIR__."/predmeti.json");
+                    $userString = file_get_contents(__DIR__."/predmetii.json");
                     $usersData = json_decode($userString, true);
 
                     if (isset($usersData))
                     {
                         foreach ($usersData as $key => $value)
                         {
+                            $id = $value['id'] ?? '';
                             $ime = $value['ime'];
                             $prezime = $value['prezime'];
 
@@ -62,6 +65,8 @@
                             
     
                             echo "<tr>
+                            <td>$id</td>
+
                                 <td>$ime</td>
                                 <td>$prezime</td>
                                 <td>$datumRodenja</td>
