@@ -47,12 +47,13 @@
                         {
                             $nazivPredmeta = $value['nazivPredmeta'];
                             $imeProfesora = $value['imeProfesora'];
+                            $godisnjiFondSati = $value['godisnjiFondSati'] ?? "";
                             $opisPredmeta = $value['opisPredmeta'];
-                            $godisnjiFondSati = $value['godisnjiFondSati'] ?? '';
+                            $checkbox = $value['checkbox'] ?? 'NE';
 
-                             $datumRodenja = (isset($value['nazivPredmeta'])) ? $value['nazivPredmeta'] : '';
+                             $nazivPredmeta = (isset($value['nazivPredmeta'])) ? $value['nazivPredmeta'] : '';
                             
-                             $datumRodenja = '';
+                             $nazivPredmeta = '';
                              if (isset($value['nazivPredmeta']) )
                              {
                                  $nazivPredmeta = $value['nazivPredmeta'];
@@ -63,6 +64,7 @@
                                 <td>$nazivPredmeta</td>
                                 <td>$imeProfesora</td>
                                 <td>$godisnjiFondSati</td>
+                                <td>$checkbox</td>
                                 <td>$opisPredmeta</td>
                             </tr>";
                         }
@@ -102,12 +104,13 @@
                         </div>
 
                         
-                        
-                        <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                        predmet je uvjet za iduću godinu
-                         </label>
+                       
+
+                    <input type="checkbox" id="checkbox" name="checkbox" value="DA" />
+
+                
+
+
                         <div class="mb-12">
                             <label for="opisPredmeta" class="form-label">Opis predmeta</label>
                             <input type="text" class="form-control" name="opisPredmeta" id="opisPredmeta" placeholder="Opis predmeta">

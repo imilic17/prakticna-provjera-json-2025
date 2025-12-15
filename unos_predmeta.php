@@ -3,7 +3,10 @@
     $userString = file_get_contents(__DIR__.'/predmeti.json');
     $usersData = json_decode($userString);
 
-    $user = array('nazivPredmeta' => $_POST['nazivPredmeta'], 'imeProfesora' => $_POST['imeProfesora'], 'godisnjiFondSati' => $_POST['godisnjiFondSati'],
+    $user = array('nazivPredmeta' => $_POST['nazivPredmeta'],
+     'imeProfesora' => $_POST['imeProfesora'],
+      'godisnjiFondSati' => $_POST['godisnjiFondSati'],
+    'checkbox' => $_POST['checkbox'],  
      'opisPredmeta' => $_POST['opisPredmeta']);
     if (isset($usersData))
     {
@@ -13,6 +16,9 @@
     {
         $usersData = array($user);
     }
+
+
+  
 
     $newString = json_encode($usersData);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
