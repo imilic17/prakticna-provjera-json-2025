@@ -58,6 +58,25 @@ if (isset($_GET['status'])) {
         echo '<div class="container mt-3"><div class="alert alert-danger" role="alert"> Greška pri pisanju u JSON datoteku ili neispravan zahtjev.</div></div>';
     }
 }
+
+$searchTerm = $_GET['search'] ?? '';
+if(!empty($searchTerm)){
+  $filteredData = [];
+  $searchLower = strtolower($searchTerm);
+
+  foreach($data as $predmet){
+    $searchString= strtolower(
+      $predmet['ime_predmeta'] . ' ' .
+      $predmet['naziv_profesora'] . ' ' .
+      $predmet['opis_predmeta']
+    );
+    if(strpos($searchString,$searchLower) !== false){
+      $filteredData[] = $predmet;
+    }
+  }
+  $dataToDisplay = $filteredData;}
+  else{$dataToDisplay = $data;}
+
 ?>
 
 <div class="container mt-5">
@@ -68,10 +87,32 @@ if (isset($_GET['status'])) {
     </button>
     
     <hr>
+    <form method="GET" action="" class="search-form">
+    <label for="search">Pretraži predmete:</label>
+    <input type="text" 
+           id="search" 
+           name="search" 
+           placeholder="Unesite naziv, profesora ili opis..." 
+           value="<?php echo htmlspecialchars($searchTerm); ?>"
+           style="width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    <button type="submit" 
+            style="padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        Pretraži
+    </button>
+    <?php if (!empty($searchTerm)): ?>
+        <a href="<?php echo htmlspecialchars(basename($_SERVER['PHP_SELF'])); ?>" 
+           style="margin-left: 10px; text-decoration: none; color: #dc3545;">
+            Poništi pretragu
+        </a>
+    <?php endif; ?>
+</form>
+
+<hr>
+    <hr>
     
     <h2>Popis unesenih predmeta</h2>
     <?php
-    if(!empty($data)){
+    if(!empty($dataToDisplay)){
         echo '
         <div class="table-responsive">
             <table class="table table-light table-striped table-hover">
@@ -87,7 +128,7 @@ if (isset($_GET['status'])) {
                 </thead>
                 <tbody>';
         
-        foreach($data as $predmet){
+        foreach($dataToDisplay as $predmet){
             $isUvijet = isset($predmet['je_li_predmet_uvijet_za_sljedecu_godinu']) && $predmet['je_li_predmet_uvijet_za_sljedecu_godinu'] === true;
             $rowClass = $isUvijet ? "uvijet-za-prolaz" :"";
 
@@ -108,6 +149,7 @@ if (isset($_GET['status'])) {
     }
     ?>
 </div>
+
 
 <div class="modal fade" id="dodajPredmetModal" tabindex="-1" aria-labelledby="dodajPredmetModalLabel" aria-hidden="true">
     <div class="modal-dialog">
