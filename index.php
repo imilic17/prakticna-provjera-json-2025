@@ -42,18 +42,20 @@
                 </thead>
                 <tbody>
                 <?php
-                    $userString = file_get_contents(__DIR__."/predmetii.json");
-                    $usersData = json_decode($userString, true);
+                    $predmetString = file_get_contents(__DIR__."/predmeti.json");
+                    $predmetiData = json_decode($predmetString, true);
 
-                    if (isset($usersData))
+                    if (isset($predmetiData))
                     {
-                        foreach ($usersData as $key => $value)
+                        foreach ($predmetiData as $key => $value)
                         {
                             $id = $value['id'] ?? '';
-                            $ime = $value['ime'];
-                            $prezime = $value['prezime'];
+                            $naziv_predmeta = $value['naziv_predmeta'];
+                            $ime_profesora = $value['ime_profesora'];
+                            $godisnji_fond_sati = $value['godisnji_fond_sati'];
 
-                            $datumRodenja = $value['datumRodenja'] ?? '';
+                            $predmet_je_uvjet = $value['predmet_je_uvjet'];
+                            $opis_predmeta = $value['opis_predmeta'];
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
@@ -66,10 +68,13 @@
     
                             echo "<tr>
                             <td>$id</td>
-
-                                <td>$ime</td>
-                                <td>$prezime</td>
-                                <td>$datumRodenja</td>
+                            <td>$naziv_predmeta</td>
+                            <td>$ime_profesora</td>
+                          
+                                <td>$godisnji_fond_sati</td>
+                                <td>$predmet_je_uvjet</td>
+                                <td>$opis_predmeta</td>
+                        
                             </tr>";
                         }
                     }
@@ -88,6 +93,10 @@
                 </div>
                 <form action="unos_korisnika.php" method="POST">
                     <div class="modal-body">
+                    <div class="mb-12">
+                            <label for="naziv_predmeta" class="form-label">Naziv predmeta</label>
+                            <input type="text" class="form-control" name="naziv_predmeta" id="naziv_predmeta" placeholder="naziv predmeta">
+                        </div>
                         <div class="mb-12">
                             <label for="ime" class="form-label">Ime</label>
                             <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
@@ -97,13 +106,23 @@
                             <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
                         </div>
                         <div class="mb-12">
+                            <label for="godisnji_fond_sati" class="form-label">Godisnji fond sati</label>
+                            <input type="text" class="form-control" name="godisnji_fond_sati" id="godisnji_fond_sati" placeholder="fond sati koji se mora godisnje odraditi">
+                        </div>
+                        <div class="mb-12">
+                            <div class="from-check">
+                             <input type="checkbox" class="form-check-input" name="predmet_je_uvjet" id="predmet_je_uvjet" >
+                            <label for="predmet_je_uvjet" class="form-check-label">Predmet je uvjet za iducu godinu</label>
+                        </div>
+                        <div class="mb-12">
+                            <label for="opis_predmeta" class="form-label">Opis predmeta</label>
+                            <input type="text" class="form-control" name="opis_predmeta" id="opis_predmeta" placeholder="Opis">
+                        </div>
+                        <div class="mb-12">
                             <label for="datumRodenja" class="form-label">Datum rođenja</label>
                             <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
                         </div>
-                        <div class="mb-12">
-                            <label for="Godisnjifondsati" class="form-label">Godisnjifondsati</label>
-                            <input type="text" class="form-control" name="Godisnjifondsati" id="Godisnjifondsati" placeholder="Godisnjifondsati">
-                        </div>
+        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
