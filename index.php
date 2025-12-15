@@ -13,7 +13,7 @@
     <h1 class="mb-4">Popis predmeta</h1>
 
     
-    <a href="index2.php" class="btn btn-primary mb-3">Dodaj predmet</a>
+    <a href="" class="btn btn-primary mb-3">Dodaj predmet</a>
 
     <?php
     
