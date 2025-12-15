@@ -48,7 +48,7 @@
                             $nazivPredmeta = $value['nazivPredmeta'];
                             $imeProfesora = $value['imeProfesora'];
                             $opisPredmeta = $value['opisPredmeta'];
-                            $godisnjiFondSati = $value['godisnjiFontSati'] ?? '';
+                            $godisnjiFondSati = $value['godisnjiFondSati'] ?? '';
 
                              $datumRodenja = (isset($value['nazivPredmeta'])) ? $value['nazivPredmeta'] : '';
                             
