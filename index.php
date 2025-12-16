@@ -16,8 +16,7 @@
             <form class="row g-3">
                 
              
-
-                <div class="col-sm-3">
+            <div class="col-sm-3">
                     <input  type="text" name="zadatak" class="form-control" id="zadatak">
                 </div>
 
@@ -30,7 +29,6 @@
         </button>   
             </form>
         </div>
-        
         <div class="row">
             <table class="table">
                 <thead>
@@ -52,6 +50,8 @@ $predmetData = json_decode($predmetString, true);
 
 if (!empty($predmetData)) {
     foreach ($predmetData as $predmet) {
+
+     
 
 
         $rowClass = ($predmet['predmet_je_uvjet'] === 'DA') ? 'table-success' : '';

@@ -27,5 +27,5 @@ $predmetData[] = $predmet;
 
 file_put_contents($path, json_encode($predmetData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
-header("Location: index.php");
+header("Location: index.php");// redirect na index jer nije bilo
 exit;
