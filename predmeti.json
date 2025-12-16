@@ -6,5 +6,45 @@
         "godisnji_fond_sati": "64",
         "predmet_je_uvjet": "DA",
         "opis_predmeta": "HTML, CSS, PHP, MySql, JS"
+    },
+    {
+        "id": 2,
+        "naziv_predmeta": "Operacijski sustavi",
+        "ime_profesora": "Antonio",
+        "godisnji_fond_sati": "70",
+        "predmet_je_uvjet": "NE",
+        "opis_predmeta": "Vrste i uloge OS-a"
+    },
+    {
+        "id": 3,
+        "naziv_predmeta": "Sigurnost informacijskih sustava",
+        "ime_profesora": "Ivana",
+        "godisnji_fond_sati": "64",
+        "predmet_je_uvjet": "NE",
+        "opis_predmeta": "Sigurnost po slojevima"
+    },
+    {
+        "id": 4,
+        "naziv_predmeta": "Matematika",
+        "ime_profesora": "Tomislav",
+        "godisnji_fond_sati": "105",
+        "predmet_je_uvjet": "DA",
+        "opis_predmeta": "Samo za najjače"
+    },
+    {
+        "id": 5,
+        "naziv_predmeta": "Poslužiteljski operacijski sustav",
+        "ime_profesora": "Kulhavi",
+        "godisnji_fond_sati": "64",
+        "predmet_je_uvjet": "DA",
+        "opis_predmeta": "Vrste i uloge poslužiteljskih OS-a"
+    },
+    {
+        "id": 6,
+        "naziv_predmeta": "Tehničko i poslovno komuniciranje",
+        "ime_profesora": "Mik",
+        "godisnji_fond_sati": "32",
+        "predmet_je_uvjet": "NE",
+        "opis_predmeta": "Uči se komunicirati u poslovnom okruženju"
     }
 ]
