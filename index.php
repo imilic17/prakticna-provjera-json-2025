@@ -54,7 +54,7 @@ if (!empty($predmetData)) {
     foreach ($predmetData as $predmet) {
 
 
-
+        $rowClass = ($predmet['predmet_je_uvjet'] === 'DA') ? 'table-success' : '';
 
       echo "
         <tr class='$rowClass'>
