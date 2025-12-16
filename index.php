@@ -58,42 +58,51 @@
                     if (isset($predmetData))
                     {
                         foreach ($predmetData as $key => $value)
-                                            {
-                                                
-                                                $id = $value['id'];
-                                                $naziv = $value['naziv-predmeta'];
-                                                $profesor = $value['ime-profesora'];
-                                                $fond = $value['godisnji-fond-sati'];
-                                                $uvjetBool = $value['predmet-je-uvjet-za-iducu-godinu'];
-                                                $uvjetString = $uvjetBool ? "DA" : "NE";
-                                                $opis = $value['opis-predmeta'];
-                                            
-                                           
-                                                $trazeno = true;
-                                            
-                                               
-                                                if (!empty($_GET['naziv'])) {
-                                                    if (stripos($naziv, $_GET['naziv']) === false) {
-                                                        $trazeno = false;
-                                                    }
-                                                }
-                                            
-                                                
-                                               
-                                            
-                                             
-                                                $redklasa = $trazeno ? "table-success" : "";
-
-                                                echo "
-                                                <tr class='$redklasa'>
-                                                    <td>$id</td>
-                                                    <td>$naziv</td>
-                                                    <td>$profesor</td>
-                                                    <td>$fond</td>
-                                                    <td>$uvjetString</td>
-                                                    <td>$opis</td>
-                                                </tr>";
+                                    {
+                                        
+                                        $id = $value['id'];
+                                        $naziv = $value['naziv-predmeta'];
+                                        $profesor = $value['ime-profesora'];
+                                        $fond = $value['godisnji-fond-sati'];
+                                    
+                                        $uvjetBool = $value['predmet-je-uvjet-za-iducu-godinu'];
+                                        $uvjetString = $uvjetBool ? "DA" : "NE";
+                                    
+                                        $opis = $value['opis-predmeta'];
+                                    
+                                       
+                                        if (!empty($_GET['naziv'])) {
+                                            if (stripos($naziv, $_GET['naziv']) === false) {
+                                                continue;
                                             }
+                                        }
+                                    
+                                        if (!empty($_GET['profesor'])) {
+                                            if (stripos($profesor, $_GET['profesor']) === false) {
+                                                continue;
+                                            }
+                                        }
+                                    
+                                        if (!empty($_GET['uvjet'])) {
+                                            if ($uvjetString !== $_GET['uvjet']) {
+                                                continue;
+                                            }
+                                        }
+                                    
+                                       
+                                        $rowClass = $uvjetBool ? "table-success" : "";
+                                    
+                                        echo "
+                                        <tr class='$rowClass'>
+                                            <td>$id</td>
+                                            <td>$naziv</td>
+                                            <td>$profesor</td>
+                                            <td>$fond</td>
+                                            <td>$uvjetString</td>
+                                            <td>$opis</td>
+                                        </tr>";
+                                    }
+
 
 
                     }
