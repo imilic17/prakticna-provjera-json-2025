@@ -46,40 +46,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php
-                    $predmetString = file_get_contents(__DIR__."/predmeti.json");
-                    $predmetData = json_decode($predmetString, true);
+               <?php
+$predmetString = file_get_contents(__DIR__.'/predmeti.json');
+$predmetData = json_decode($predmetString, true);
 
-                    if (isset($predmetData))
-                    {
-                        foreach ($predmetData as $key => $value)
-                        {
-                            $id = $value['id'];
-                            $naziv_predmeta = $value['naziv_predmeta'];
-                            $ime_profesora = $value['ime_profesora'];
-                            $godisnji_fond_sati = $value['godisnji_fond_sati'];
+if (!empty($predmetData)) {
+    foreach ($predmetData as $predmet) {
 
-                            $predmet_je_uvjet = $value['predmet_je_uvjet'];
-                            $opis_predmeta = $value['opis_predmeta'];
-
-
-                           
-
-                            echo "<tr>
-                                <td>$id</td>
-
-                                <td>$naziv_predmeta</td>
-                                <td>$ime_profesora</td>
-                                <td>$godisnji_fond_sati</td>
-                                <td>$predmet_je_uvjet</td>
-                                <td>$opis_predmeta</td>
+        echo "
+        <tr class='$rowClass'>
+            <td>{$predmet['id']}</td>
+            <td>{$predmet['naziv_predmeta']}</td>
+            <td>{$predmet['ime_profesora']}</td>
+            <td>{$predmet['godisnji_fond_sati']}</td>
+            <td>{$predmet['predmet_je_uvjet']}</td>
+            <td>{$predmet['opis_predmeta']}</td>
+        </tr>
+        ";
+    }
+}
+?>
 
 
-                            </tr>";
-                        }
-                    }
-                ?>
-               
                    
                 </tbody>
             </table>
@@ -108,11 +96,15 @@
                             <input type="text" class="form-control" name="godisnji_fond_sati" id="godisnji_fond_sati" placeholder="fond sati koji se mora godisnje odraditi">
                         </div>
                         <div class="mb-12">
-                            <div class="from-check">
-                             <input type="checkbox" class="form-check-input" name="predmet_je_uvjet" id="predmet_je_uvjet" >
-                            <label for="predmet_je_uvjet" class="form-check-label">Predmet je uvjet za iducu godinu</label>
-                           
-                        </div>
+ <div class="form-check">
+  
+
+    <label for="predmet_je_uvjet" class="form-check-label">
+        Predmet je uvjet za iduću godinu
+    </label>
+</div>
+
+</div>
                         <div class="mb-12">
                             <label for="opis_predmeta" class="form-label">Opis predmeta</label>
                             <input type="text" class="form-control" name="opis_predmeta" id="opis_predmeta" placeholder="Opis">
