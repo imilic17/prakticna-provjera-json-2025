@@ -101,11 +101,7 @@
                                             <td>$uvjetString</td>
                                             <td>$opis</td>
                                         </tr>";
-                                    }
-
-
-
-                    }
+                                    }  }
                 ?>
                 
             </tbody>
