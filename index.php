@@ -51,7 +51,11 @@ $predmetData = json_decode($predmetString, true);
 if (!empty($predmetData)) {
     foreach ($predmetData as $predmet) {
 
-     
+        if (!empty($_GET['zadatak'])) {
+            if (stripos($predmet['naziv_predmeta'], $_GET['zadatak']) === false) {
+                continue;
+            }
+        }
 
 
         $rowClass = ($predmet['predmet_je_uvjet'] === 'DA') ? 'table-success' : '';
