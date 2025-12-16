@@ -77,17 +77,7 @@
                                             }
                                         }
                                     
-                                        if (!empty($_GET['profesor'])) {
-                                            if (stripos($profesor, $_GET['profesor']) === false) {
-                                                continue;
-                                            }
-                                        }
-                                    
-                                        if (!empty($_GET['uvjet'])) {
-                                            if ($uvjetString !== $_GET['uvjet']) {
-                                                continue;
-                                            }
-                                        }
+                                        
                                     
                                        
                                         $rowClass = $uvjetBool ? "table-success" : "";
