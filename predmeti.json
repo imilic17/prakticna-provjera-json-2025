@@ -14,5 +14,13 @@
         "godisnji_fond_sati": "70",
         "predmet_je_uvjet": null,
         "opis_predmeta": "Vrste i uloge OS-a"
+    },
+    {
+        "id": 3,
+        "naziv_predmeta": "Sigurnost informacijskih sustava",
+        "ime_profesora": "Ivana",
+        "godisnji_fond_sati": "64",
+        "predmet_je_uvjet": "DA",
+        "opis_predmeta": "sas"
     }
 ]

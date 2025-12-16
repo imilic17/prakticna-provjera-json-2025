@@ -53,7 +53,10 @@ $predmetData = json_decode($predmetString, true);
 if (!empty($predmetData)) {
     foreach ($predmetData as $predmet) {
 
-        echo "
+
+
+
+      echo "
         <tr class='$rowClass'>
             <td>{$predmet['id']}</td>
             <td>{$predmet['naziv_predmeta']}</td>
@@ -97,7 +100,13 @@ if (!empty($predmetData)) {
                         </div>
                         <div class="mb-12">
  <div class="form-check">
-  
+    <input type="hidden" name="predmet_je_uvjet" value="NE">
+
+    <input type="checkbox"
+           class="form-check-input"
+           name="predmet_je_uvjet"
+           id="predmet_je_uvjet"
+           value="DA">
 
     <label for="predmet_je_uvjet" class="form-check-label">
         Predmet je uvjet za iduću godinu
