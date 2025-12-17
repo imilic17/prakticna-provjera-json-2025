@@ -16,6 +16,6 @@
     $newString = json_encode($usersData);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
 
-    header("Location: http://localhost/pernar/prakticna-provjera-json-2025/index.php");
+    header("Location: index.php");
     die();
 ?>
