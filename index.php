@@ -75,6 +75,8 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Novi korisnik</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                
+                
                 </div>
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
@@ -107,6 +109,8 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
                         <button type="submit" class="btn btn-primary">Spremi promjene</button>
                     </div>
+                
+                
                 </form>
             </div>
         </div>
