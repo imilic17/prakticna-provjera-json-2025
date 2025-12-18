@@ -11,6 +11,15 @@
     <title>Primjer 1!</title>
   </head>
   <body>
+    <nav class="navbar navbar-light bg-light">  
+        <form class="form-inline">  
+            <input class="form-control mr-sm-2" type="search" name="filter" placeholder="Search" aria-label="Search"
+            value="<?php if (isset($_GET['filter'])) { echo $_GET['filter']; } ?>"
+        >
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Traži</button>
+        </form>
+    </nav>
+
     <div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Novi korisnik
