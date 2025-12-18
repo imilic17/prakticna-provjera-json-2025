@@ -47,11 +47,11 @@
                         foreach ($predmetiJson as $key => $value)
                         {
                             $id = $value['id'];
-                            $ime_profesora = $value['ime'];
-                            $naziv_predmeta = $value['NazivPredmeta'];
-                            $fond_sati = $value['GodisnjiFondSati'];
-                            $uvjet_za_sljedecu_godinu = $value['UvjetGod'] ?? "";
-                            $opis_predmeta = $value['OpisPredmeta'] ?? '';
+                            $ime = $value['ime'];
+                            $NazivPredmeta = $value['NazivPredmeta'];
+                            $GodinsjiFondSati = $value['GodisnjiFondSati'];
+                            $UvjetGod= $value['UvjetGod'] ?? "";
+                            $opisPredmeta = $value['OpisPredmeta'] ?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
@@ -64,11 +64,11 @@
     
                             echo "<tr>
                                 <td>$id</td>
-                                <td>$ime_profesora</td>
-                                <td>$naziv_predmeta</td>
-                                <td>$fond_sati</td>
-                                <td>$uvjet_za_sljedecu_godinu</td>
-                                <td>$opis_predmeta</td>
+                                <td>$ime</td>
+                                <td>$NazivPredmeta</td>
+                                <td>$GodinsjiFondSati</td>
+                                <td>$UvjetGod</td>
+                                <td>$opisPredmeta</td>
                             </tr>";
                         }
                     }
