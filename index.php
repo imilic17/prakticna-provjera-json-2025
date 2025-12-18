@@ -39,7 +39,7 @@
             </thead>
             <tbody>
                 <?php
-                    $predmetiString = file_get_contents(__DIR__."/predmeti.json");
+                     $predmetiString = file_get_contents(__DIR__."/predmeti.json");
                     $predmetiJson = json_decode($predmetiString, true);
 
                     if (isset($predmetiJson))
