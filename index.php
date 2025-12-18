@@ -42,6 +42,9 @@
                      $predmetiString = file_get_contents(__DIR__."/predmeti.json");
                     $predmetiJson = json_decode($predmetiString, true);
 
+                    $filter = isset($_GET['filter']) ? strtolower($_GET['filter']) : ''; 
+
+
                     if (isset($predmetiJson))
                     {
                         foreach ($predmetiJson as $key => $value)
@@ -49,7 +52,7 @@
                             $id = $value['id'];
                             $ime = $value['ime'];
                             $NazivPredmeta = $value['NazivPredmeta'];
-                            $GodinsjiFondSati = $value['GodisnjiFondSati'];
+                            $GodisnjiFondSati = $value['GodisnjiFondSati'];
                             $UvjetGod= $value['UvjetGod'] ?? "";
                             $opisPredmeta = $value['OpisPredmeta'] ?? '';
 
@@ -62,12 +65,17 @@
                             // }
                             $tr_class = ($UvjetGod == 'DA') ? 'table-success' : '';
                             
+                            
+                            if ($filter !== '' && strpos(strtolower($ime), $filter) === false && strpos(strtolower($NazivPredmeta), $filter) === false) {
+                            continue;
+                            }
+
     
                             echo "<tr>
                                 <td>$id</td>
                                 <td>$ime</td>
                                 <td>$NazivPredmeta</td>
-                                <td>$GodinsjiFondSati</td>
+                                <td>$GodisnjiFondSati</td>
                                 <td>$UvjetGod</td>
                                 <td>$opisPredmeta</td>
                             </tr>";
