@@ -40,7 +40,7 @@
             <tbody>
                 <?php
                     $predmetiString = file_get_contents(__DIR__."/predmeti.json");
-                    $predmetiJson = json_decode($userString, true);
+                    $predmetiJson = json_decode($predmetiString, true);
 
                     if (isset($predmetiJson))
                     {
@@ -91,24 +91,24 @@
                     <div class="modal-body">
                         
                         <div class="mb-12">
-                            <label for="ime_profesora" class="form-label">Ime prof</label>
-                            <input type="text" class="form-control" name="ime" id="ime_profesora" placeholder="ime_profesora">
+                            <label for="ime" class="form-label">Ime prof</label>
+                            <input type="text" class="form-control" name="ime" id="ime" placeholder="ime">
                         </div>
                         <div class="mb-12">
-                            <label for="naziv_predmeta" class="form-label">naziv predmeta</label>
-                            <input type="text" class="form-control" name="naziv_predmeta" id="naziv_predmeta" placeholder="naziv_predmeta">
+                            <label for="NazivPredmeta" class="form-label">naziv predmeta</label>
+                            <input type="text" class="form-control" name="NazivPredmeta" id="NazivPredmeta" placeholder="NazivPredmeta">
                         </div>
                         <div class="mb-12">
-                            <label for="fond_sati" class="form-label">fond sati</label>
-                            <input type="text" class="form-control" name="fond_sati" id="fond_sati" placeholder="fond_sati">
+                            <label for="GodisnjiFondSati" class="form-label">fond sati</label>
+                            <input type="text" class="form-control" name="GodisnjiFondSati" id="GodisnjiFondSati" placeholder="GodisnjiFondSati">
                         </div>
                         <div class="mb-12">
-                            <label for="uvjet_za_sljedecu_godinu" class="form-label">uvjet za slj. god.</label>
-                            <input type="text" class="form-control" name="uvjet_za_sljedecu_godinu" id="uvjet_za_sljedecu_godinu" placeholder="uvjet_za_sljedecu_godinu">
+                            <label for="UvjetGod" class="form-label">uvjet za slj. god.</label>
+                            <input type="text" class="form-control" name="UvjetGod" id="UvjetGod" placeholder="UvjetGod">
                         </div>
                         <div class="mb-12">
-                            <label for="opis_predmeta" class="form-label">opis predmeta</label>
-                            <input type="text" class="form-control" name="opis_predmeta" id="opis_predmeta" placeholder="opis_predmeta">
+                            <label for="OpisPredmeta" class="form-label">opis predmeta</label>
+                            <input type="text" class="form-control" name="OpisPredmeta" id="OpisPredmeta" placeholder="OpisPredmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
