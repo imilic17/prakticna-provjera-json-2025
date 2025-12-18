@@ -1,7 +1,7 @@
 <?php
 
     $predmetiString = file_get_contents(__DIR__.'/predmeti.json');
-    $predmetiJson = json_decode($userString,true);
+    $predmetiJson = json_decode($predmetiString,true);
 
     $nextId = 1;
     if(!empty($predmetiJson)){
