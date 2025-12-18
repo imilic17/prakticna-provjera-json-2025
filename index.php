@@ -60,6 +60,7 @@
                             // {
                             //     $datumRodenja = $value['datumRodenja'];
                             // }
+                            $tr_class = ($UvjetGod == 'DA') ? 'table-success' : '';
                             
     
                             echo "<tr>
