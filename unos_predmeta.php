@@ -26,7 +26,7 @@
         $predmetiJson=array($predmet);
     }
 
-    $newString = json_encode($usersData);
+    $newString = json_encode($predmetiJson);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
 
     header("Location: index.php");
