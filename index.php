@@ -89,10 +89,7 @@
                 </div>
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
-                        <div class="mb-12">
-                            <label for="id" class="form-label">ID</label>
-                            <input type="text" class="form-control" name="ime" id="id" placeholder="id">
-                        </div>
+                        
                         <div class="mb-12">
                             <label for="ime_profesora" class="form-label">Ime prof</label>
                             <input type="text" class="form-control" name="ime" id="ime_profesora" placeholder="ime_profesora">
