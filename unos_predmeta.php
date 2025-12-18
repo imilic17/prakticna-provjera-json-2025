@@ -9,7 +9,8 @@
         $nextId = max($ids)+1;
     }
 
-    $uvjet= isset($_POST['UvjetGod']) ? $_POST['UvjetGod'] :'NE';
+    $uvjet = isset($_POST['UvjetGod']) ? 'DA' : 'NE';
+
 
     $predmet =array(
         'id'=>$nextId,
