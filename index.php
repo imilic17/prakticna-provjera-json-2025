@@ -39,19 +39,19 @@
             </thead>
             <tbody>
                 <?php
-                    $userString = file_get_contents(__DIR__."/predmeti.json");
-                    $usersData = json_decode($userString, true);
+                    $predmetiString = file_get_contents(__DIR__."/predmeti.json");
+                    $predmetiJson = json_decode($userString, true);
 
-                    if (isset($usersData))
+                    if (isset($predmetiJson))
                     {
-                        foreach ($usersData as $key => $value)
+                        foreach ($predmetiJson as $key => $value)
                         {
                             $id = $value['id'];
-                            $ime_profesora = $value['ime_profesora'];
-                            $naziv_predmeta = $value['naziv_predmeta'];
-                            $fond_sati = $value['fond_sati'];
-                            $uvjet_za_sljedecu_godinu = $value['uvjet_za_sljedecu_godinu'] ?? "";
-                            $opis_predmeta = $value['opis_predmeta'] ?? '';
+                            $ime_profesora = $value['ime'];
+                            $naziv_predmeta = $value['NazivPredmeta'];
+                            $fond_sati = $value['GodisnjiFondSati'];
+                            $uvjet_za_sljedecu_godinu = $value['UvjetGod'] ?? "";
+                            $opis_predmeta = $value['OpisPredmeta'] ?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
