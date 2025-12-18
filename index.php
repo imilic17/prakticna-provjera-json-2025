@@ -104,7 +104,7 @@
                         </div>
                         <div class="mb-12">
                             <label for="UvjetGod" class="form-label">uvjet za slj. god.</label>
-                            <input type="checkbox" class="form-control" name="UvjetGod" value="DA" id="UvjetGod" placeholder="UvjetGod">
+                            <input type="checkbox"  name="UvjetGod" value="DA" id="UvjetGod" >
                         </div>
                         <div class="mb-12">
                             <label for="OpisPredmeta" class="form-label">opis predmeta</label>
