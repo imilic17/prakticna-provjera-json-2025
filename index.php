@@ -71,7 +71,7 @@
                             }
 
     
-                            echo "<tr>
+                            echo "<tr class='$tr_class'>
                                 <td>$id</td>
                                 <td>$ime</td>
                                 <td>$NazivPredmeta</td>

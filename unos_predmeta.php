@@ -14,8 +14,9 @@
 
     $predmet =array(
         'id'=>$nextId,
-        'NazivPredmeta'=>$_POST['NazivPredmeta'],
         'ime'=>$_POST['ime'],
+        'NazivPredmeta'=>$_POST['NazivPredmeta'],
+        
         'GodisnjiFondSati'=>$_POST['GodisnjiFondSati'],
         'UvjetGod'=>$uvjet,
         'OpisPredmeta'=>$_POST['OpisPredmeta']
