@@ -20,6 +20,12 @@
         'OpisPredmeta'=>$_POST['OpisPredmeta']
     );
 
+    if(isset($predmetiJson)){
+        $predmetiJson[]=$predmet;
+    }else{
+        $predmetiJson=array($predmet);
+    }
+
     $newString = json_encode($usersData);
     file_put_contents(__DIR__.'/predmeti.json', $newString);
 
