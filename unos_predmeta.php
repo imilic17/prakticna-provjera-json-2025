@@ -3,7 +3,16 @@
     $userString = file_get_contents(__DIR__.'/predmeti.json');
     $usersData = json_decode($userString);
 
-    $user = array('nazivPredmeta' => $_POST['nazivPredmeta'], 'imeProfesora' => $_POST['imeProfesora'], 'godisnjiFondSati' => $_POST['godisnjiFondSati'],'predmetJeUvjekZaIducuGodinu' => $_POST['predmetJeUvjetZaIducuGodinu'],'opisPredmeta' => $_POST['opisPredmeta']);
+    
+    
+    
+    $user = array(
+        'ID' => $_POST['ID'],
+        'nazivPredmeta' => $_POST['nazivPredmeta'],
+         'imeProfesora' => $_POST['imeProfesora'],
+          'godisnjiFondSati' => $_POST['godisnjiFondSati'],
+           'predmetJeUvjekZaIducuGodinu' => $_POST['predmetJeUvjekZaIducuGodinu'],
+            'opisPredmeta' => $_POST['opisPredmeta']);
     if (isset($usersData))
     {
         $usersData[] = $user;

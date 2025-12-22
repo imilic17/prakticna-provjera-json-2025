@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 <div>
@@ -36,8 +37,8 @@
                             $imeProfesora = $value['imeProfesora'];
                             $nazivPredmeta = $value['nazivPredmeta'];
                             $godisnjiFondSati = $value['godisnjiFondSati'];
-                            $predmetJeUvjetZaIducuGodinu = $value['predmetJeUvjetZaIducuGodinu'];
-                            $opisPredmeta = $value['ospisPredmeta']?? '';
+                            $predmetJeUvjekZaIducuGodinu = $value['predmetJeUvjekZaIducuGodinu']?? '';
+                            $opisPredmeta = $value['opisPredmeta']?? '';
 
                             // $datumRodenja = (isset($value['datumRodenja'])) ? $value['datumRodenja'] : '';
                             
@@ -53,7 +54,7 @@
                                 <td>$imeProfesora</td>
                                 <td>$nazivPredmeta</td>
                                 <td>$godisnjiFondSati</td>
-                                <td>$predmetJeUvjetZaIducuGodinu</td>
+                                <td>$predmetJeUvjekZaIducuGodinu</td>
                                 <td>$opisPredmeta</td>
                             </tr>";
                         }
@@ -74,24 +75,24 @@
                 <form action="unos_predmeta.php" method="POST">
                     <div class="modal-body">
                         <div class="mb-12">
-                            <label for="ime" class="form-label">NazivPredmeta</label>
-                            <input type="text" class="form-control" name="ime" id="ime" placeholder="Ime">
+                            <label for="nazivPredmeta" class="form-label">nazivPredmeta</label>
+                            <input type="text" class="form-control" name="nazivPredmeta" id="nazivPredmeta" placeholder="nazivPredmeta">
                         </div>
                         <div class="mb-12">
-                            <label for="prezime" class="form-label">Ime profesora</label>
-                            <input type="text" class="form-control" name="prezime" id="prezime" placeholder="Prezime">
+                            <label for="prezime" class="form-label">ime profesora</label>
+                            <input type="text" class="form-control" name="imeProfesora" id="imeProfesora" placeholder="imeProfesora">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Novi korisnik</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                            <label for="datumRodenja" class="form-label">godisnjiFondSati</label>
+                            <input type="text" class="form-control" name="godisnjiFondSati" id="godisnjiFondSati" placeholder="godisnjiFondSati">
                         </div>
                         <div class="mb-12">
-                            <label for="datumRodenja" class="form-label">Predmet je uvjek za iducu godinu</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                        <label for="datumRodenja" class="form-label">predmet je uvjet za iducu godinu</label>
+                        <input type="text" class="form-control" name="predmetJeUvjekZaIducuGodinu" id="predmetJeUvjekZaIducuGodinu" placeholder="predmetJeUvjekZaIducuGodinu">
                         </div>
                         <div class="mb-12">
                             <label for="datumRodenja" class="form-label">Opis predmeta</label>
-                            <input type="text" class="form-control" name="datumRodenja" id="datumRodenja" placeholder="Datum rođenja">
+                            <input type="text" class="form-control" name="opisPredmeta" id="opisPredmeta" placeholder="opisPredmeta">
                         </div>
                     </div>
                     <div class="modal-footer">
